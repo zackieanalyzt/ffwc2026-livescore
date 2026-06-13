@@ -861,6 +861,10 @@ function App() {
         <p style={{ fontSize: '0.7rem', marginTop: '0.6rem', color: '#64748b', maxWidth: '600px', margin: '0.6rem auto 0', lineHeight: '1.4' }}>
           {t('disclaimer', lang)}
         </p>
+        <p style={{ fontSize: '0.8rem', marginTop: '0.8rem', color: 'var(--cyan)', fontWeight: '600' }}>
+          {lang === 'th' ? 'พัฒนาโดย' : 'Developed by'}{' '}
+          <span style={{ color: 'var(--gold)', textShadow: '0 0 10px var(--gold-glow)' }}>Zackie Hybridman</span>
+        </p>
       </footer>
     </div>
   );
