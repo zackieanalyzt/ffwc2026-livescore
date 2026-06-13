@@ -154,12 +154,24 @@ function App() {
       const res = await fetch(`${API_BASE}/api/predictions/leaderboard`);
       if (res.ok) {
         const data = await res.json();
-        setLeaderboard(data.leaderboard || []);
+        const list = data.leaderboard || [];
+        if (username) {
+          const hasUser = list.some((item: LeaderboardEntry) => item.username === username);
+          if (!hasUser) {
+            list.push({
+              username,
+              exact: 0,
+              outcome: 0,
+              points: 0
+            });
+          }
+        }
+        setLeaderboard(list);
       }
-    } catch (e) {
-      console.error('Error loading leaderboard:', e);
+    } catch (error) {
+      console.error('Error loading leaderboard:', error);
     }
-  }, []);
+  }, [username]);
 
   // ระบบเสียงหวีดและแฟนบอลสังเคราะห์ (Audio Synthesis)
   const playGoalAudio = () => {

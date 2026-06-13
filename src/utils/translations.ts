@@ -169,7 +169,7 @@ export const UI_TRANSLATIONS = {
   registerLabel: { th: 'ป้อนชื่อเล่นของคุณเพื่อทายผลและสะสมคะแนน:', en: 'Enter your name to start predicting & earning points:' },
   registerBtn: { th: 'บันทึกชื่อ', en: 'Save Name' },
   changeUserBtn: { th: 'เปลี่ยนชื่อ', en: 'Change Name' },
-  userWelcome: { th: 'ผู้เล่น: {name} (ทายผลไปแล้ว)', en: 'Player: {name} (Predictions active)' },
+  userWelcome: { th: 'ผู้เล่น: {name} (พร้อมทายผล)', en: 'Player: {name} (Ready to predict)' },
   lbRank: { th: 'อันดับ', en: 'Rank' },
   lbName: { th: 'ชื่อผู้เล่น', en: 'Player Name' },
   lbExact: { th: 'ทายสกอร์ตรงเป๊ะ (3 แต้ม)', en: 'Exact Score (3 pts)' },
