@@ -853,10 +853,13 @@ function App() {
       )}
 
       {/* ส่วนท้ายแสดงรายละเอียดลิขสิทธิ์ */}
-      <footer className="dashboard-footer">
+      <footer className="dashboard-footer" style={{ textAlign: 'center', padding: '2rem 1rem', borderTop: '1px solid rgba(255,255,255,0.05)', marginTop: '3rem' }}>
         <p>{t('footerTitle', lang)} <span>fifa.com</span></p>
         <p style={{ fontSize: '0.75rem', marginTop: '0.4rem', color: 'var(--text-muted)' }}>
           {t('footerSub', lang)}
+        </p>
+        <p style={{ fontSize: '0.7rem', marginTop: '0.6rem', color: '#64748b', maxWidth: '600px', margin: '0.6rem auto 0', lineHeight: '1.4' }}>
+          {t('disclaimer', lang)}
         </p>
       </footer>
     </div>

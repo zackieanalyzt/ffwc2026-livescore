@@ -86,6 +86,10 @@ export const UI_TRANSLATIONS = {
   tickerPlaceholder: { th: 'กำลังรอเปิดสนามการแข่งขัน...', en: 'Waiting for kick-off...' },
   footerTitle: { th: '© 2026 ระบบแดชบอร์ด LiveScore ฟุตบอลโลก 2026 อ้างอิงตารางตามจริงจาก', en: '© 2026 World Cup LiveScore Dashboard. Official fixtures referenced from' },
   footerSub: { th: 'จัดทำขึ้นพิเศษด้วยธีมมืดระดับพรีเมียม แปลภาษาไทยและเวลาเตะท้องถิ่นประเทศไทย (GMT+7)', en: 'Premium Dark Theme Dashboard. Localized in Thai / English and Thailand Time (GMT+7)' },
+  disclaimer: {
+    th: 'แอปพลิเคชันนี้จัดทำขึ้นโดยแฟนบอลเพื่อจุดประสงค์การสาธิตและการศึกษาเท่านั้น และไม่มีความเกี่ยวข้องหรือได้รับการสนับสนุนอย่างเป็นทางการจาก FIFA หรือองค์กรฟุตบอลใดๆ เครื่องหมายการค้าและโลโก้ทั้งหมดเป็นลิขสิทธิ์ของเจ้าของตามกฎหมาย',
+    en: 'This is an unofficial fan-made project for demonstration/educational purposes. We are not affiliated with, endorsed by, or associated with FIFA or any official football organization. All trademarks are properties of their respective owners.'
+  },
   liveMatchesTitle: { th: 'การแข่งขันที่กำลังเล่นอยู่ (Live Matches)', en: 'Live Matches In Progress' },
   recentResultsTitle: { th: '⚽ การแข่งขันที่เพิ่งจบลง (Recent Results)', en: '⚽ Recent Results' },
   noLiveMatches: { th: 'ไม่มีการแข่งขันสดจริงตามเวลาปัจจุบันในขณะนี้', en: 'No matches playing live at this hour' },
