@@ -821,14 +821,188 @@ app.post('/api/simulation/reset', (req, res) => {
   res.json({ success: true, message: 'รีเซ็ตข้อมูลผลแข่งขันกลับสู่ค่าดั้งเดิมแล้ว' });
 });
 
+const TEAM_EN_TO_TH = {
+  'Mexico': 'เม็กซิโก',
+  'South Africa': 'แอฟริกาใต้',
+  'South Korea': 'เกาหลีใต้',
+  'Czech Republic': 'เช็กเกีย',
+  'Canada': 'แคนาดา',
+  'Bosnia and Herzegovina': 'บอสเนียและเฮอร์เซโกวีนา',
+  'Qatar': 'กาตาร์',
+  'Switzerland': 'สวิตเซอร์แลนด์',
+  'Brazil': 'บราซิล',
+  'Morocco': 'โมร็อกโก',
+  'Haiti': 'ไฮติ',
+  'Scotland': 'สกอตแลนด์',
+  'United States': 'สหรัฐอเมริกา',
+  'Paraguay': 'ปารากวัย',
+  'Australia': 'ออสเตรเลีย',
+  'Turkey': 'ตุรกี',
+  'Germany': 'เยอรมนี',
+  'Ecuador': 'เอกวาดอร์',
+  'Ivory Coast': 'ไอวอรีโคสต์',
+  'Curaçao': 'กูราเซา',
+  'Netherlands': 'เนเธอร์แลนด์',
+  'Sweden': 'สวีเดน',
+  'Japan': 'ญี่ปุ่น',
+  'Tunisia': 'ตูนิเซีย',
+  'Belgium': 'เบลเยียม',
+  'Egypt': 'อียิปต์',
+  'Iran': 'อิหร่าน',
+  'New Zealand': 'นิวซีแลนด์',
+  'Spain': 'สเปน',
+  'Uruguay': 'อุรุกวัย',
+  'Cape Verde': 'เคปเวิร์ด',
+  'Saudi Arabia': 'ซาอุดีอาระเบีย',
+  'France': 'ฝรั่งเศส',
+  'Norway': 'นอร์เวย์',
+  'Senegal': 'เซเนกัล',
+  'Iraq': 'อิรัก',
+  'Argentina': 'อาร์เจนตินา',
+  'Austria': 'ออสเตรีย',
+  'Algeria': 'แอลจีเรีย',
+  'Jordan': 'จอร์แดน',
+  'Portugal': 'โปรตุเกส',
+  'Colombia': 'โคลอมเบีย',
+  'Democratic Republic of the Congo': 'ดีอาร์ คองโก',
+  'Uzbekistan': 'อุซเบกิสถาน',
+  'England': 'อังกฤษ',
+  'Panama': 'ปานามา',
+  'Croatia': 'โครเอเชีย',
+  'Ghana': 'กานา'
+};
+
+function parseScorers(scorersStr, teamName) {
+  if (!scorersStr || scorersStr === 'null' || scorersStr === '""') return [];
+  const events = [];
+  try {
+    let cleaned = scorersStr.trim();
+    if (cleaned.startsWith('{') && cleaned.endsWith('}')) {
+      cleaned = '[' + cleaned.substring(1, cleaned.length - 1) + ']';
+    }
+    cleaned = cleaned.replace(/”/g, '"').replace(/“/g, '"');
+    
+    const arr = JSON.parse(cleaned);
+    if (Array.isArray(arr)) {
+      arr.forEach(scorer => {
+        const match = scorer.match(/^(.*?)\s+(\d+)(?:\+\d+)?'(?:\s*\((OG|p)\))?$/i);
+        if (match) {
+          const player = match[1].trim();
+          const min = parseInt(match[2]);
+          const isOG = match[3] && match[3].toLowerCase() === 'og';
+          events.push({
+            type: 'GOAL',
+            minute: min,
+            team: teamName,
+            player: isOG ? `${player} (OG)` : player
+          });
+        }
+      });
+    }
+  } catch (e) {
+    try {
+      const matchesList = scorersStr.match(/"([^"]+)"|'([^']+)'|([^,{}"]+)/g);
+      if (matchesList) {
+        matchesList.forEach(item => {
+          const scorer = item.replace(/[{}"']/g, '').trim();
+          const match = scorer.match(/^(.*?)\s+(\d+)(?:\+\d+)?'(?:\s*\((OG|p)\))?$/i);
+          if (match) {
+            const player = match[1].trim();
+            const min = parseInt(match[2]);
+            const isOG = match[3] && match[3].toLowerCase() === 'og';
+            events.push({
+              type: 'GOAL',
+              minute: min,
+              team: teamName,
+              player: isOG ? `${player} (OG)` : player
+            });
+          }
+        });
+      }
+    } catch (err) {
+      console.error('Scorers parse error:', err);
+    }
+  }
+  return events;
+}
+
+async function fetchRealWorldMatches() {
+  try {
+    const res = await fetch('https://worldcup26.ir/get/games');
+    if (!res.ok) throw new Error('Failed to fetch real-world matches');
+    const data = await res.json();
+    if (data && Array.isArray(data.games)) {
+      data.games.forEach(game => {
+        const team1Thai = TEAM_EN_TO_TH[game.home_team_name_en];
+        const team2Thai = TEAM_EN_TO_TH[game.away_team_name_en];
+        if (!team1Thai || !team2Thai) return;
+
+        const match = matches.find(m => 
+          (m.team1 === team1Thai && m.team2 === team2Thai) ||
+          (m.team1 === team2Thai && m.team2 === team1Thai)
+        );
+
+        if (match) {
+          const finished = game.finished === 'TRUE';
+          const isLive = game.time_elapsed === 'live' || (!finished && game.time_elapsed !== 'notstarted' && game.time_elapsed !== 'null');
+          
+          const isHomeTeam1 = match.team1 === team1Thai;
+          const score1Val = parseInt(isHomeTeam1 ? game.home_score : game.away_score) || 0;
+          const score2Val = parseInt(isHomeTeam1 ? game.away_score : game.home_score) || 0;
+          
+          match.score1 = score1Val;
+          match.score2 = score2Val;
+          
+          if (finished) {
+            match.status = 'FINISHED';
+            match.minute = 90;
+          } else if (isLive) {
+            match.status = 'LIVE';
+            match.minute = parseInt(game.time_elapsed) || 45;
+          } else {
+            match.status = 'SCHEDULED';
+            match.minute = 0;
+          }
+
+          const homeEvents = parseScorers(game.home_scorers, game.home_team_name_en);
+          const awayEvents = parseScorers(game.away_scorers, game.away_team_name_en);
+          
+          const events = [];
+          homeEvents.forEach(e => {
+            events.push({
+              type: e.type,
+              minute: e.minute,
+              team: TEAM_EN_TO_TH[e.team] || e.team,
+              player: e.player
+            });
+          });
+          awayEvents.forEach(e => {
+            events.push({
+              type: e.type,
+              minute: e.minute,
+              team: TEAM_EN_TO_TH[e.team] || e.team,
+              player: e.player
+            });
+          });
+
+          events.sort((a, b) => a.minute - b.minute);
+          match.events = events;
+        }
+      });
+      console.log(`[FIFA Scraper] Successfully updated ${data.games.length} matches from real-world API.`);
+    }
+  } catch (error) {
+    console.error('[FIFA Scraper] Error fetching real-world matches:', error);
+  }
+}
+
 // Endpoint ดึงข้อมูลจาก fifa.com แบบจำลอง Scraper
 app.get('/api/scrape', async (req, res) => {
   try {
-    // โค้ดส่วนนี้เป็นการจำลองการ Scrape เนื่องจาก fifa.com จริงมี Bot protection หนาแน่น
-    // แต่ทำงานอัปเดตข้อมูลให้กับเซิร์ฟเวอร์แบบจำลองได้
+    await fetchRealWorldMatches();
     res.json({
       success: true,
-      message: 'ตรวจสอบความเชื่อมโยงกับ fifa.com เรียบร้อยแล้ว (กำลังใช้ข้อมูลทางการของทัวร์นาเมนต์)',
+      message: 'อัปเดตข้อมูลผลการแข่งขันจริงฟุตบอลโลก 2026 สำเร็จแล้ว!',
       lastUpdate: new Date().toLocaleTimeString('th-TH')
     });
   } catch (err) {
@@ -953,4 +1127,10 @@ app.get(/.*/, (req, res) => {
 // เริ่มต้นฟังพอร์ต
 app.listen(PORT, () => {
   console.log(`[FIFA Web App] Server is running on port ${PORT}`);
+  
+  // ดึงข้อมูลจริงจาก API ทันทีที่เซิร์ฟเวอร์เปิดใช้งาน
+  fetchRealWorldMatches();
+  
+  // ตั้งค่าดึงข้อมูลใหม่ทุกๆ 1 ชั่วโมง (3600000 ms)
+  setInterval(fetchRealWorldMatches, 3600000);
 });
