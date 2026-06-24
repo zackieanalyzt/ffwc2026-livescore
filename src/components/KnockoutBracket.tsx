@@ -50,21 +50,21 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
   // ฟังก์ชันแสดงวันที่แข่งขันของแต่ละแมตช์รอบน็อกเอาต์
   const getMatchDate = (matchId: string): string => {
     const dates: Record<string, { th: string; en: string }> = {
-      R32_1: { th: '30 มิ.ย. 2026', en: 'Jun 30, 2026' },
-      R32_2: { th: '28 มิ.ย. 2026', en: 'Jun 28, 2026' },
-      R32_3: { th: '2 ก.ค. 2026', en: 'Jul 2, 2026' },
+      R32_1: { th: '29 มิ.ย. 2026', en: 'Jun 29, 2026' },
+      R32_2: { th: '30 มิ.ย. 2026', en: 'Jun 30, 2026' },
+      R32_3: { th: '28 มิ.ย. 2026', en: 'Jun 28, 2026' },
       R32_4: { th: '29 มิ.ย. 2026', en: 'Jun 29, 2026' },
-      R32_5: { th: '29 มิ.ย. 2026', en: 'Jun 29, 2026' },
-      R32_6: { th: '1 ก.ค. 2026', en: 'Jul 1, 2026' },
-      R32_7: { th: '30 มิ.ย. 2026', en: 'Jun 30, 2026' },
-      R32_8: { th: '29 มิ.ย. 2026', en: 'Jun 29, 2026' },
-      R32_9: { th: '1 ก.ค. 2026', en: 'Jul 1, 2026' },
-      R32_10: { th: '1 ก.ค. 2026', en: 'Jul 1, 2026' },
+      R32_5: { th: '2 ก.ค. 2026', en: 'Jul 2, 2026' },
+      R32_6: { th: '2 ก.ค. 2026', en: 'Jul 2, 2026' },
+      R32_7: { th: '1 ก.ค. 2026', en: 'Jul 1, 2026' },
+      R32_8: { th: '1 ก.ค. 2026', en: 'Jul 1, 2026' },
+      R32_9: { th: '29 มิ.ย. 2026', en: 'Jun 29, 2026' },
+      R32_10: { th: '30 มิ.ย. 2026', en: 'Jun 30, 2026' },
       R32_11: { th: '30 มิ.ย. 2026', en: 'Jun 30, 2026' },
-      R32_12: { th: '2 ก.ค. 2026', en: 'Jul 2, 2026' },
-      R32_13: { th: '2 ก.ค. 2026', en: 'Jul 2, 2026' },
+      R32_12: { th: '1 ก.ค. 2026', en: 'Jul 1, 2026' },
+      R32_13: { th: '3 ก.ค. 2026', en: 'Jul 3, 2026' },
       R32_14: { th: '3 ก.ค. 2026', en: 'Jul 3, 2026' },
-      R32_15: { th: '3 ก.ค. 2026', en: 'Jul 3, 2026' },
+      R32_15: { th: '2 ก.ค. 2026', en: 'Jul 2, 2026' },
       R32_16: { th: '3 ก.ค. 2026', en: 'Jul 3, 2026' },
       
       R16_1: { th: '4 ก.ค. 2026', en: 'Jul 4, 2026' },
@@ -135,24 +135,24 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
 
   const thirds = getBestThirdPlaced();
 
-  // กำหนดคู่แข่งรอบ 32 ทีมสุดท้ายตามผัง (ใช้การจำลองจับคู่แบบสมมาตร)
+  // กำหนดคู่แข่งรอบ 32 ทีมสุดท้ายตามผัง (ตรงตามสายแข่งขันจริง FIFA World Cup 2026)
   const r32Matches = [
-    { id: 'R32_1', t1: getGroupWinner('A'), t2: thirds[0] },
-    { id: 'R32_2', t1: getGroupRunnerUp('A'), t2: getGroupRunnerUp('B') },
-    { id: 'R32_3', t1: getGroupWinner('B'), t2: thirds[1] },
-    { id: 'R32_4', t1: getGroupRunnerUp('C'), t2: getGroupRunnerUp('D') },
-    { id: 'R32_5', t1: getGroupWinner('C'), t2: thirds[2] },
-    { id: 'R32_6', t1: getGroupWinner('D'), t2: thirds[3] },
-    { id: 'R32_7', t1: getGroupRunnerUp('E'), t2: getGroupRunnerUp('F') },
-    { id: 'R32_8', t1: getGroupWinner('E'), t2: getGroupRunnerUp('C') },
-    { id: 'R32_9', t1: getGroupWinner('F'), t2: getGroupRunnerUp('A') },
-    { id: 'R32_10', t1: getGroupRunnerUp('G'), t2: getGroupRunnerUp('H') },
-    { id: 'R32_11', t1: getGroupWinner('G'), t2: thirds[4] },
-    { id: 'R32_12', t1: getGroupWinner('H'), t2: getGroupRunnerUp('D') },
-    { id: 'R32_13', t1: getGroupWinner('I'), t2: thirds[5] },
-    { id: 'R32_14', t1: getGroupRunnerUp('I'), t2: getGroupRunnerUp('J') },
-    { id: 'R32_15', t1: getGroupWinner('J'), t2: getGroupRunnerUp('K') },
-    { id: 'R32_16', t1: getGroupWinner('K'), t2: getGroupRunnerUp('L') }
+    { id: 'R32_1', t1: getGroupWinner('E'), t2: thirds[6] },
+    { id: 'R32_2', t1: getGroupWinner('I'), t2: thirds[5] },
+    { id: 'R32_3', t1: getGroupRunnerUp('A'), t2: getGroupRunnerUp('B') },
+    { id: 'R32_4', t1: getGroupWinner('F'), t2: getGroupRunnerUp('C') },
+    { id: 'R32_5', t1: getGroupRunnerUp('K'), t2: getGroupRunnerUp('L') },
+    { id: 'R32_6', t1: getGroupWinner('H'), t2: getGroupRunnerUp('J') },
+    { id: 'R32_7', t1: getGroupWinner('D'), t2: thirds[3] },
+    { id: 'R32_8', t1: getGroupWinner('G'), t2: thirds[4] },
+    { id: 'R32_9', t1: getGroupWinner('C'), t2: getGroupRunnerUp('F') },
+    { id: 'R32_10', t1: getGroupRunnerUp('E'), t2: getGroupRunnerUp('I') },
+    { id: 'R32_11', t1: getGroupWinner('A'), t2: thirds[0] },
+    { id: 'R32_12', t1: getGroupWinner('L'), t2: thirds[7] },
+    { id: 'R32_13', t1: getGroupWinner('J'), t2: getGroupRunnerUp('H') },
+    { id: 'R32_14', t1: getGroupRunnerUp('D'), t2: getGroupRunnerUp('G') },
+    { id: 'R32_15', t1: getGroupWinner('B'), t2: thirds[1] },
+    { id: 'R32_16', t1: getGroupWinner('K'), t2: thirds[2] }
   ];
 
   // คำนวณผู้เล่นในรอบ 16 ทีมจากผลรอบ 32 ทีมที่ยูสเซอร์คลิกเลือกผู้ชนะ
@@ -161,35 +161,35 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
   };
 
   const r16Matches = [
-    { id: 'R16_1', t1: getWinnerOf('R32_1', lang === 'th' ? 'ผู้ชนะคู่ที่ 1' : 'ผู้ชนะคู่ที่ 1'), t2: getWinnerOf('R32_2', lang === 'th' ? 'ผู้ชนะคู่ที่ 2' : 'ผู้ชนะคู่ที่ 2') },
-    { id: 'R16_2', t1: getWinnerOf('R32_3', lang === 'th' ? 'ผู้ชนะคู่ที่ 3' : 'ผู้ชนะคู่ที่ 3'), t2: getWinnerOf('R32_4', lang === 'th' ? 'ผู้ชนะคู่ที่ 4' : 'ผู้ชนะคู่ที่ 4') },
-    { id: 'R16_3', t1: getWinnerOf('R32_5', lang === 'th' ? 'ผู้ชนะคู่ที่ 5' : 'ผู้ชนะคู่ที่ 5'), t2: getWinnerOf('R32_6', lang === 'th' ? 'ผู้ชนะคู่ที่ 6' : 'ผู้ชนะคู่ที่ 6') },
-    { id: 'R16_4', t1: getWinnerOf('R32_7', lang === 'th' ? 'ผู้ชนะคู่ที่ 7' : 'ผู้ชนะคู่ที่ 7'), t2: getWinnerOf('R32_8', lang === 'th' ? 'ผู้ชนะคู่ที่ 8' : 'ผู้ชนะคู่ที่ 8') },
-    { id: 'R16_5', t1: getWinnerOf('R32_9', lang === 'th' ? 'ผู้ชนะคู่ที่ 9' : 'ผู้ชนะคู่ที่ 9'), t2: getWinnerOf('R32_10', lang === 'th' ? 'ผู้ชนะคู่ที่ 10' : 'ผู้ชนะคู่ที่ 10') },
-    { id: 'R16_6', t1: getWinnerOf('R32_11', lang === 'th' ? 'ผู้ชนะคู่ที่ 11' : 'ผู้ชนะคู่ที่ 11'), t2: getWinnerOf('R32_12', lang === 'th' ? 'ผู้ชนะคู่ที่ 12' : 'ผู้ชนะคู่ที่ 12') },
-    { id: 'R16_7', t1: getWinnerOf('R32_13', lang === 'th' ? 'ผู้ชนะคู่ที่ 13' : 'ผู้ชนะคู่ที่ 13'), t2: getWinnerOf('R32_14', lang === 'th' ? 'ผู้ชนะคู่ที่ 14' : 'ผู้ชนะคู่ที่ 14') },
-    { id: 'R16_8', t1: getWinnerOf('R32_15', lang === 'th' ? 'ผู้ชนะคู่ที่ 15' : 'ผู้ชนะคู่ที่ 15'), t2: getWinnerOf('R32_16', lang === 'th' ? 'ผู้ชนะคู่ที่ 16' : 'ผู้ชนะคู่ที่ 16') }
+    { id: 'R16_1', t1: getWinnerOf('R32_1', lang === 'th' ? 'ผู้ชนะคู่ที่ 1' : 'Winner Match 1'), t2: getWinnerOf('R32_2', lang === 'th' ? 'ผู้ชนะคู่ที่ 2' : 'Winner Match 2') },
+    { id: 'R16_2', t1: getWinnerOf('R32_3', lang === 'th' ? 'ผู้ชนะคู่ที่ 3' : 'Winner Match 3'), t2: getWinnerOf('R32_4', lang === 'th' ? 'ผู้ชนะคู่ที่ 4' : 'Winner Match 4') },
+    { id: 'R16_3', t1: getWinnerOf('R32_5', lang === 'th' ? 'ผู้ชนะคู่ที่ 5' : 'Winner Match 5'), t2: getWinnerOf('R32_6', lang === 'th' ? 'ผู้ชนะคู่ที่ 6' : 'Winner Match 6') },
+    { id: 'R16_4', t1: getWinnerOf('R32_7', lang === 'th' ? 'ผู้ชนะคู่ที่ 7' : 'Winner Match 7'), t2: getWinnerOf('R32_8', lang === 'th' ? 'ผู้ชนะคู่ที่ 8' : 'Winner Match 8') },
+    { id: 'R16_5', t1: getWinnerOf('R32_9', lang === 'th' ? 'ผู้ชนะคู่ที่ 9' : 'Winner Match 9'), t2: getWinnerOf('R32_10', lang === 'th' ? 'ผู้ชนะคู่ที่ 10' : 'Winner Match 10') },
+    { id: 'R16_6', t1: getWinnerOf('R32_11', lang === 'th' ? 'ผู้ชนะคู่ที่ 11' : 'Winner Match 11'), t2: getWinnerOf('R32_12', lang === 'th' ? 'ผู้ชนะคู่ที่ 12' : 'Winner Match 12') },
+    { id: 'R16_7', t1: getWinnerOf('R32_13', lang === 'th' ? 'ผู้ชนะคู่ที่ 13' : 'Winner Match 13'), t2: getWinnerOf('R32_14', lang === 'th' ? 'ผู้ชนะคู่ที่ 14' : 'Winner Match 14') },
+    { id: 'R16_8', t1: getWinnerOf('R32_15', lang === 'th' ? 'ผู้ชนะคู่ที่ 15' : 'Winner Match 15'), t2: getWinnerOf('R32_16', lang === 'th' ? 'ผู้ชนะคู่ที่ 16' : 'Winner Match 16') }
   ];
 
   // รอบ 8 ทีมสุดท้าย (Quarterfinals)
   const qfMatches = [
-    { id: 'QF_1', t1: getWinnerOf('R16_1', lang === 'th' ? 'ผู้ชนะคู่ที่ 17' : 'ผู้ชนะคู่ที่ 17'), t2: getWinnerOf('R16_2', lang === 'th' ? 'ผู้ชนะคู่ที่ 18' : 'ผู้ชนะคู่ที่ 18') },
-    { id: 'QF_2', t1: getWinnerOf('R16_3', lang === 'th' ? 'ผู้ชนะคู่ที่ 19' : 'ผู้ชนะคู่ที่ 19'), t2: getWinnerOf('R16_4', lang === 'th' ? 'ผู้ชนะคู่ที่ 20' : 'ผู้ชนะคู่ที่ 20') },
-    { id: 'QF_3', t1: getWinnerOf('R16_5', lang === 'th' ? 'ผู้ชนะคู่ที่ 21' : 'ผู้ชนะคู่ที่ 21'), t2: getWinnerOf('R16_6', lang === 'th' ? 'ผู้ชนะคู่ที่ 22' : 'ผู้ชนะคู่ที่ 22') },
-    { id: 'QF_4', t1: getWinnerOf('R16_7', lang === 'th' ? 'ผู้ชนะคู่ที่ 23' : 'ผู้ชนะคู่ที่ 23'), t2: getWinnerOf('R16_8', lang === 'th' ? 'ผู้ชนะคู่ที่ 24' : 'ผู้ชนะคู่ที่ 24') }
+    { id: 'QF_1', t1: getWinnerOf('R16_1', lang === 'th' ? 'ผู้ชนะคู่ที่ 17' : 'Winner Match 17'), t2: getWinnerOf('R16_2', lang === 'th' ? 'ผู้ชนะคู่ที่ 18' : 'Winner Match 18') },
+    { id: 'QF_2', t1: getWinnerOf('R16_3', lang === 'th' ? 'ผู้ชนะคู่ที่ 19' : 'Winner Match 19'), t2: getWinnerOf('R16_4', lang === 'th' ? 'ผู้ชนะคู่ที่ 20' : 'Winner Match 20') },
+    { id: 'QF_3', t1: getWinnerOf('R16_5', lang === 'th' ? 'ผู้ชนะคู่ที่ 21' : 'Winner Match 21'), t2: getWinnerOf('R16_6', lang === 'th' ? 'ผู้ชนะคู่ที่ 22' : 'Winner Match 22') },
+    { id: 'QF_4', t1: getWinnerOf('R16_7', lang === 'th' ? 'ผู้ชนะคู่ที่ 23' : 'Winner Match 23'), t2: getWinnerOf('R16_8', lang === 'th' ? 'ผู้ชนะคู่ที่ 24' : 'Winner Match 24') }
   ];
 
   // รอบรองชนะเลิศ (Semifinals)
   const sfMatches = [
-    { id: 'SF_1', t1: getWinnerOf('QF_1', lang === 'th' ? 'ผู้ชนะคู่ที่ 25' : 'ผู้ชนะคู่ที่ 25'), t2: getWinnerOf('QF_2', lang === 'th' ? 'ผู้ชนะคู่ที่ 26' : 'ผู้ชนะคู่ที่ 26') },
-    { id: 'SF_2', t1: getWinnerOf('QF_3', lang === 'th' ? 'ผู้ชนะคู่ที่ 27' : 'ผู้ชนะคู่ที่ 27'), t2: getWinnerOf('QF_4', lang === 'th' ? 'ผู้ชนะคู่ที่ 28' : 'ผู้ชนะคู่ที่ 28') }
+    { id: 'SF_1', t1: getWinnerOf('QF_1', lang === 'th' ? 'ผู้ชนะคู่ที่ 25' : 'Winner Match 25'), t2: getWinnerOf('QF_2', lang === 'th' ? 'ผู้ชนะคู่ที่ 26' : 'Winner Match 26') },
+    { id: 'SF_2', t1: getWinnerOf('QF_3', lang === 'th' ? 'ผู้ชนะคู่ที่ 27' : 'Winner Match 27'), t2: getWinnerOf('QF_4', lang === 'th' ? 'ผู้ชนะคู่ที่ 28' : 'Winner Match 28') }
   ];
 
   // รอบชิงชนะเลิศ (Final)
   const finalMatch = { 
     id: 'FINAL', 
-    t1: getWinnerOf('SF_1', lang === 'th' ? 'ผู้ชนะคู่ที่ 29' : 'ผู้ชนะคู่ที่ 29'), 
-    t2: getWinnerOf('SF_2', lang === 'th' ? 'ผู้ชนะคู่ที่ 30' : 'ผู้ชนะคู่ที่ 30') 
+    t1: getWinnerOf('SF_1', lang === 'th' ? 'ผู้ชนะคู่ที่ 29' : 'Winner Match 29'), 
+    t2: getWinnerOf('SF_2', lang === 'th' ? 'ผู้ชนะคู่ที่ 30' : 'Winner Match 30') 
   };
 
   const champion = winners['FINAL'];
