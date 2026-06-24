@@ -82,392 +82,3392 @@ const TEAM_PLAYERS = {
 
 // รายการแมตช์การแข่งขันทั้งหมด (Matchday 1 ครบทั้ง 12 กลุ่ม)
 let INITIAL_MATCHES = [
-  // Group A
   {
-    id: 1,
-    group: 'A',
-    team1: 'เม็กซิโก',
-    team2: 'แอฟริกาใต้',
-    score1: 2,
-    score2: 0,
-    status: 'FINISHED', // FINISHED, LIVE, SCHEDULED
-    minute: 90,
-    date: '2026-06-11T20:30:00-05:00', // เวลาที่ประเทศเจ้าภาพ (Mexico City)
-    venue: 'สนามกีฬากลางเม็กซิโกซิตี้ (Estadio Azteca)',
-    events: [
-      { type: 'GOAL', minute: 9, team: 'เม็กซิโก', player: 'Julián Quiñones' },
-      { type: 'RED', minute: 58, team: 'แอฟริกาใต้', player: 'Sphephelo Sithole' },
-      { type: 'GOAL', minute: 67, team: 'เม็กซิโก', player: 'Raúl Jiménez' },
-      { type: 'RED', minute: 78, team: 'แอฟริกาใต้', player: 'Themba Zwane' },
-      { type: 'RED', minute: 90, team: 'เม็กซิโก', player: 'César Montes' }
-    ],
-    stats: {
-      possession: [58, 42],
-      shots: [14, 6],
-      shotsOnTarget: [6, 2],
-      fouls: [12, 16],
-      corners: [7, 3],
-      offsides: [2, 1],
-      yellowCards: [2, 4],
-      redCards: [1, 2]
+    "id": 1,
+    "group": "A",
+    "team1": "เม็กซิโก",
+    "team2": "แอฟริกาใต้",
+    "score1": 2,
+    "score2": 0,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-11T13:00:00-05:00",
+    "venue": "สนามกีฬากลางเม็กซิโกซิตี้ (Estadio Azteca)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
     }
   },
   {
-    id: 2,
-    group: 'A',
-    team1: 'เกาหลีใต้',
-    team2: 'เช็กเกีย',
-    score1: 2,
-    score2: 1,
-    status: 'FINISHED',
-    minute: 90,
-    date: '2026-06-12T12:00:00-06:00', // Guadalajara
-    venue: 'สนามกีฬากัวดาลาฮารา (Estadio Akron)',
-    events: [
-      { type: 'GOAL', minute: 59, team: 'เช็กเกีย', player: 'Ladislav Krejčí' },
-      { type: 'GOAL', minute: 67, team: 'เกาหลีใต้', player: 'Hwang In-beom' },
-      { type: 'GOAL', minute: 80, team: 'เกาหลีใต้', player: 'Oh Hyeon-gyu' }
-    ],
-    stats: {
-      possession: [51, 49],
-      shots: [11, 13],
-      shotsOnTarget: [5, 4],
-      fouls: [9, 14],
-      corners: [4, 6],
-      offsides: [3, 0],
-      yellowCards: [1, 2],
-      redCards: [0, 0]
+    "id": 2,
+    "group": "A",
+    "team1": "เกาหลีใต้",
+    "team2": "เช็กเกีย",
+    "score1": 2,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-11T20:00:00-05:00",
+    "venue": "สนามกีฬากัวดาลาฮารา (Estadio Akron)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
     }
   },
-  // Group B
   {
-    id: 3,
-    group: 'B',
-    team1: 'แคนาดา',
-    team2: 'บอสเนียและเฮอร์เซโกวีนา',
-    score1: 1,
-    score2: 1,
-    status: 'FINISHED',
-    minute: 90,
-    date: '2026-06-12T15:00:00-04:00', // Toronto (3:00 PM ET) -> เวลาไทย: 13 มิ.ย. เวลา 02:00 น.
-    venue: 'สนามกีฬาโตรอนโต (BMO Field)',
-    events: [
-      { type: 'GOAL', minute: 21, team: 'บอสเนียและเฮอร์เซโกวีนา', player: 'Jovo Lukić' },
-      { type: 'GOAL', minute: 78, team: 'แคนาดา', player: 'Cyle Larin' }
-    ],
-    stats: { possession: [54, 46], shots: [14, 11], shotsOnTarget: [5, 4], fouls: [11, 14], corners: [6, 4], offsides: [2, 1], yellowCards: [1, 2], redCards: [0, 0] }
+    "id": 3,
+    "group": "B",
+    "team1": "แคนาดา",
+    "team2": "บอสเนียและเฮอร์เซโกวีนา",
+    "score1": 1,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-12T15:00:00-04:00",
+    "venue": "สนามกีฬาโตรอนโต (BMO Field)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
   },
   {
-    id: 4,
-    group: 'B',
-    team1: 'กาตาร์',
-    team2: 'สวิตเซอร์แลนด์',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-13T12:00:00-04:00', // เวลาไทย: 13 มิ.ย. เวลา 23:00 น.
-    venue: 'สนามกีฬาโตรอนโต (BMO Field)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
-  },
-  // Group C
-  {
-    id: 5,
-    group: 'C',
-    team1: 'บราซิล',
-    team2: 'โมร็อกโก',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-13T15:00:00-07:00', // Seattle -> เวลาไทย: 14 มิ.ย. เวลา 05:00 น. (เช้าวันอาทิตย์)
-    venue: 'สนามกีฬาลูเมนฟิลด์ (Seattle)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
-  },
-  {
-    id: 6,
-    group: 'C',
-    team1: 'ไฮติ',
-    team2: 'สกอตแลนด์',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-14T12:00:00-04:00', // Miami -> เวลาไทย: 14 มิ.ย. เวลา 23:00 น.
-    venue: 'สนามกีฬาฮาร์ดร็อค (Miami)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
-  },
-  // Group D
-  {
-    id: 7,
-    group: 'D',
-    team1: 'สหรัฐอเมริกา',
-    team2: 'ปารากวัย',
-    score1: 4,
-    score2: 1,
-    status: 'FINISHED',
-    minute: 90,
-    date: '2026-06-12T21:00:00-07:00', // Los Angeles (9:00 PM PT) -> เวลาไทย: 13 มิ.ย. เวลา 11:00 น.
-    venue: 'โลสแอนเจลิส สเตเดียม (SoFi Stadium)',
-    events: [
-      { type: 'GOAL', minute: 7, team: 'สหรัฐอเมริกา', player: 'Damián Bobadilla (OG)' },
-      { type: 'GOAL', minute: 31, team: 'สหรัฐอเมริกา', player: 'Folarin Balogun' },
-      { type: 'GOAL', minute: 50, team: 'สหรัฐอเมริกา', player: 'Folarin Balogun' },
-      { type: 'GOAL', minute: 73, team: 'ปารากวัย', player: 'Maurício' },
-      { type: 'GOAL', minute: 90, team: 'สหรัฐอเมริกา', player: 'Gio Reyna' }
-    ],
-    stats: { possession: [58, 42], shots: [16, 9], shotsOnTarget: [7, 3], fouls: [10, 15], corners: [8, 3], offsides: [3, 2], yellowCards: [1, 3], redCards: [0, 0] }
+    "id": 4,
+    "group": "D",
+    "team1": "สหรัฐอเมริกา",
+    "team2": "ปารากวัย",
+    "score1": 4,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-12T18:00:00-07:00",
+    "venue": "โลสแอนเจลิส สเตเดียม (SoFi Stadium)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
   },
   {
-    id: 8,
-    group: 'D',
-    team1: 'ออสเตรเลีย',
-    team2: 'ตุรกี',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-13T18:00:00-07:00', // SF Bay Area -> เวลาไทย: 14 มิ.ย. เวลา 08:00 น.
-    venue: 'ลีวายส์ สเตเดียม (Santa Clara)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
-  },
-  // Group E
-  {
-    id: 9,
-    group: 'E',
-    team1: 'เยอรมนี',
-    team2: 'เอกวาดอร์',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-14T15:00:00-04:00', // Philadelphia -> เวลาไทย: 15 มิ.ย. เวลา 02:00 น.
-    venue: 'ลินคอล์น ไฟแนนเชียล ฟิลด์ (Philadelphia)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
-  },
-  {
-    id: 10,
-    group: 'E',
-    team1: 'ไอวอรีโคสต์',
-    team2: 'กูราเซา',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-14T18:00:00-05:00', // Houston -> เวลาไทย: 15 มิ.ย. เวลา 06:00 น.
-    venue: 'เอ็นอาร์จี สเตเดียม (Houston)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
-  },
-  // Group F
-  {
-    id: 11,
-    group: 'F',
-    team1: 'เนเธอร์แลนด์',
-    team2: 'สวีเดน',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-15T15:00:00-04:00', // Boston -> เวลาไทย: 16 มิ.ย. เวลา 02:00 น.
-    venue: 'ยิลเล็ตต์ สเตเดียม (Boston)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
+    "id": 5,
+    "group": "C",
+    "team1": "ไฮติ",
+    "team2": "สกอตแลนด์",
+    "score1": 0,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-13T21:00:00-04:00",
+    "venue": "ยิลเล็ตต์ สเตเดียม (Boston)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
   },
   {
-    id: 12,
-    group: 'F',
-    team1: 'ญี่ปุ่น',
-    team2: 'ตูนิเซีย',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-15T18:00:00-07:00', // Los Angeles -> เวลาไทย: 16 มิ.ย. เวลา 08:00 น.
-    venue: 'โลสแอนเจลิส สเตเดียม (SoFi Stadium)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
-  },
-  // Group G
-  {
-    id: 13,
-    group: 'G',
-    team1: 'เบลเยียม',
-    team2: 'อียิปต์',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-16T12:00:00-04:00', // NY/NJ -> เวลาไทย: 16 มิ.ย. เวลา 23:00 น.
-    venue: 'เม็ทไลฟ์ สเตเดียม (East Rutherford)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
-  },
-  {
-    id: 14,
-    group: 'G',
-    team1: 'อิหร่าน',
-    team2: 'นิวซีแลนด์',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-16T15:00:00-05:00', // Dallas -> เวลาไทย: 17 มิ.ย. เวลา 03:00 น.
-    venue: 'เอทีแอนด์ที สเตเดียม (Arlington)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
-  },
-  // Group H
-  {
-    id: 15,
-    group: 'H',
-    team1: 'สเปน',
-    team2: 'อุรุกวัย',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-16T18:00:00-07:00', // SF Bay Area -> เวลาไทย: 17 มิ.ย. เวลา 08:00 น.
-    venue: 'ลีวายส์ สเตเดียม (Santa Clara)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
+    "id": 6,
+    "group": "D",
+    "team1": "ออสเตรเลีย",
+    "team2": "ตุรกี",
+    "score1": 2,
+    "score2": 0,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-13T21:00:00-07:00",
+    "venue": "บีซี เพลส (Vancouver)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
   },
   {
-    id: 16,
-    group: 'H',
-    team1: 'เคปเวิร์ด',
-    team2: 'ซาอุดีอาระเบีย',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-17T12:00:00-04:00', // Boston -> เวลาไทย: 17 มิ.ย. เวลา 23:00 น.
-    venue: 'ยิลเล็ตต์ สเตเดียม (Boston)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
-  },
-  // Group I
-  {
-    id: 17,
-    group: 'I',
-    team1: 'ฝรั่งเศส',
-    team2: 'นอร์เวย์',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-16T21:00:00-07:00', // Vancouver -> เวลาไทย: 17 มิ.ย. เวลา 11:00 น.
-    venue: 'บีซี เพลส (Vancouver)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
-  },
-  {
-    id: 18,
-    group: 'I',
-    team1: 'เซเนกัล',
-    team2: 'อิรัก',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-17T15:00:00-04:00', // NY/NJ -> เวลาไทย: 18 มิ.ย. เวลา 02:00 น.
-    venue: 'เม็ทไลฟ์ สเตเดียม (East Rutherford)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
-  },
-  // Group J
-  {
-    id: 19,
-    group: 'J',
-    team1: 'อาร์เจนตินา',
-    team2: 'ออสเตรีย',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-17T18:00:00-07:00', // Seattle -> เวลาไทย: 18 มิ.ย. เวลา 08:00 น.
-    venue: 'สนามกีฬาลูเมนฟิลด์ (Seattle)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
+    "id": 7,
+    "group": "C",
+    "team1": "บราซิล",
+    "team2": "โมร็อกโก",
+    "score1": 1,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-13T18:00:00-04:00",
+    "venue": "เม็ทไลฟ์ สเตเดียม (East Rutherford)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
   },
   {
-    id: 20,
-    group: 'J',
-    team1: 'แอลจีเรีย',
-    team2: 'จอร์แดน',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-18T12:00:00-04:00', // Miami -> เวลาไทย: 18 มิ.ย. เวลา 23:00 น.
-    venue: 'สนามกีฬาฮาร์ดร็อค (Miami)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
-  },
-  // Group K
-  {
-    id: 21,
-    group: 'K',
-    team1: 'โปรตุเกส',
-    team2: 'โคลอมเบีย',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-17T21:00:00-07:00', // Los Angeles -> เวลาไทย: 18 มิ.ย. เวลา 11:00 น.
-    venue: 'โลสแอนเจลิส สเตเดียม (SoFi Stadium)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
-  },
-  {
-    id: 22,
-    group: 'K',
-    team1: 'ดีอาร์ คองโก',
-    team2: 'อุซเบกิสถาน',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-18T15:00:00-05:00', // Atlanta -> เวลาไทย: 19 มิ.ย. เวลา 02:00 น.
-    venue: 'เมอร์เซเดส-เบนซ์ สเตเดียม (Atlanta)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
-  },
-  // Group L
-  {
-    id: 23,
-    group: 'L',
-    team1: 'อังกฤษ',
-    team2: 'ปานามา',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-18T18:00:00-07:00', // San Francisco -> เวลาไทย: 19 มิ.ย. เวลา 08:00 น.
-    venue: 'ลีวายส์ สเตเดียม (Santa Clara)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
+    "id": 8,
+    "group": "B",
+    "team1": "กาตาร์",
+    "team2": "สวิตเซอร์แลนด์",
+    "score1": 1,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-13T12:00:00-07:00",
+    "venue": "ลีวายส์ สเตเดียม (Santa Clara)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
   },
   {
-    id: 24,
-    group: 'L',
-    team1: 'โครเอเชีย',
-    team2: 'กานา',
-    score1: 0,
-    score2: 0,
-    status: 'SCHEDULED',
-    minute: 0,
-    date: '2026-06-18T21:00:00-07:00', // Vancouver -> เวลาไทย: 19 มิ.ย. เวลา 11:00 น.
-    venue: 'บีซี เพลส (Vancouver)',
-    events: [],
-    stats: { possession: [50, 50], shots: [0, 0], shotsOnTarget: [0, 0], fouls: [0, 0], corners: [0, 0], offsides: [0, 0], yellowCards: [0, 0], redCards: [0, 0] }
+    "id": 9,
+    "group": "E",
+    "team1": "ไอวอรีโคสต์",
+    "team2": "เอกวาดอร์",
+    "score1": 1,
+    "score2": 0,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-14T19:00:00-04:00",
+    "venue": "ลินคอล์น ไฟแนนเชียล ฟิลด์ (Philadelphia)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "group": "E",
+    "team1": "เยอรมนี",
+    "team2": "กูราเซา",
+    "score1": 7,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-14T12:00:00-05:00",
+    "venue": "เอ็นอาร์จี สเตเดียม (Houston)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "group": "F",
+    "team1": "เนเธอร์แลนด์",
+    "team2": "ญี่ปุ่น",
+    "score1": 2,
+    "score2": 2,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-14T15:00:00-05:00",
+    "venue": "เอทีแอนด์ที สเตเดียม (Arlington)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "group": "F",
+    "team1": "สวีเดน",
+    "team2": "ตูนิเซีย",
+    "score1": 5,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-14T20:00:00-05:00",
+    "venue": "สนามกีฬาบีบีวีเอ (Estadio Monterrey)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "group": "G",
+    "team1": "อิหร่าน",
+    "team2": "นิวซีแลนด์",
+    "score1": 2,
+    "score2": 2,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-15T18:00:00-07:00",
+    "venue": "โลสแอนเจลิส สเตเดียม (SoFi Stadium)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "group": "H",
+    "team1": "สเปน",
+    "team2": "เคปเวิร์ด",
+    "score1": 0,
+    "score2": 0,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-15T12:00:00-04:00",
+    "venue": "เมอร์เซเดส-เบนซ์ สเตเดียม (Atlanta)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "group": "G",
+    "team1": "เบลเยียม",
+    "team2": "อียิปต์",
+    "score1": 1,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-15T12:00:00-07:00",
+    "venue": "สนามกีฬาลูเมนฟิลด์ (Seattle)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 16,
+    "group": "H",
+    "team1": "ซาอุดีอาระเบีย",
+    "team2": "อุรุกวัย",
+    "score1": 1,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-15T18:00:00-04:00",
+    "venue": "สนามกีฬาฮาร์ดร็อค (Miami)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 17,
+    "group": "I",
+    "team1": "ฝรั่งเศส",
+    "team2": "เซเนกัล",
+    "score1": 3,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-16T15:00:00-04:00",
+    "venue": "เม็ทไลฟ์ สเตเดียม (East Rutherford)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "group": "I",
+    "team1": "อิรัก",
+    "team2": "นอร์เวย์",
+    "score1": 1,
+    "score2": 4,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-16T18:00:00-04:00",
+    "venue": "ยิลเล็ตต์ สเตเดียม (Boston)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "group": "J",
+    "team1": "อาร์เจนตินา",
+    "team2": "แอลจีเรีย",
+    "score1": 3,
+    "score2": 0,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-16T20:00:00-05:00",
+    "venue": "สนามกีฬาลูกศร (Arrowhead Stadium)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "group": "J",
+    "team1": "ออสเตรีย",
+    "team2": "จอร์แดน",
+    "score1": 3,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-16T21:00:00-07:00",
+    "venue": "ลีวายส์ สเตเดียม (Santa Clara)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 21,
+    "group": "K",
+    "team1": "โปรตุเกส",
+    "team2": "ดีอาร์ คองโก",
+    "score1": 1,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-17T12:00:00-05:00",
+    "venue": "เอ็นอาร์จี สเตเดียม (Houston)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 22,
+    "group": "L",
+    "team1": "อังกฤษ",
+    "team2": "โครเอเชีย",
+    "score1": 4,
+    "score2": 2,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-17T15:00:00-05:00",
+    "venue": "เอทีแอนด์ที สเตเดียม (Arlington)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 23,
+    "group": "K",
+    "team1": "อุซเบกิสถาน",
+    "team2": "โคลอมเบีย",
+    "score1": 1,
+    "score2": 3,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-17T20:00:00-05:00",
+    "venue": "สนามกีฬากลางเม็กซิโกซิตี้ (Estadio Azteca)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 24,
+    "group": "L",
+    "team1": "กานา",
+    "team2": "ปานามา",
+    "score1": 1,
+    "score2": 0,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-17T19:00:00-04:00",
+    "venue": "สนามกีฬาโตรอนโต (BMO Field)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "group": "A",
+    "team1": "เม็กซิโก",
+    "team2": "เกาหลีใต้",
+    "score1": 1,
+    "score2": 0,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-18T19:00:00-05:00",
+    "venue": "สนามกีฬากัวดาลาฮารา (Estadio Akron)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 26,
+    "group": "B",
+    "team1": "สวิตเซอร์แลนด์",
+    "team2": "บอสเนียและเฮอร์เซโกวีนา",
+    "score1": 4,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-18T12:00:00-07:00",
+    "venue": "โลสแอนเจลิส สเตเดียม (SoFi Stadium)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "group": "B",
+    "team1": "แคนาดา",
+    "team2": "กาตาร์",
+    "score1": 6,
+    "score2": 0,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-18T15:00:00-07:00",
+    "venue": "บีซี เพลส (Vancouver)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 28,
+    "group": "A",
+    "team1": "เช็กเกีย",
+    "team2": "แอฟริกาใต้",
+    "score1": 1,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-18T12:00:00-04:00",
+    "venue": "เมอร์เซเดส-เบนซ์ สเตเดียม (Atlanta)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 29,
+    "group": "C",
+    "team1": "บราซิล",
+    "team2": "ไฮติ",
+    "score1": 3,
+    "score2": 0,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-19T21:00:00-04:00",
+    "venue": "ลินคอล์น ไฟแนนเชียล ฟิลด์ (Philadelphia)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 30,
+    "group": "C",
+    "team1": "สกอตแลนด์",
+    "team2": "โมร็อกโก",
+    "score1": 0,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-19T18:00:00-04:00",
+    "venue": "ยิลเล็ตต์ สเตเดียม (Boston)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 31,
+    "group": "D",
+    "team1": "สหรัฐอเมริกา",
+    "team2": "ออสเตรเลีย",
+    "score1": 2,
+    "score2": 0,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-19T12:00:00-07:00",
+    "venue": "สนามกีฬาลูเมนฟิลด์ (Seattle)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 32,
+    "group": "D",
+    "team1": "ตุรกี",
+    "team2": "ปารากวัย",
+    "score1": 0,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-19T20:00:00-07:00",
+    "venue": "ลีวายส์ สเตเดียม (Santa Clara)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 33,
+    "group": "E",
+    "team1": "เยอรมนี",
+    "team2": "ไอวอรีโคสต์",
+    "score1": 2,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-20T16:00:00-04:00",
+    "venue": "สนามกีฬาโตรอนโต (BMO Field)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 34,
+    "group": "E",
+    "team1": "เอกวาดอร์",
+    "team2": "กูราเซา",
+    "score1": 0,
+    "score2": 0,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-20T19:00:00-05:00",
+    "venue": "สนามกีฬาลูกศร (Arrowhead Stadium)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 35,
+    "group": "F",
+    "team1": "เนเธอร์แลนด์",
+    "team2": "สวีเดน",
+    "score1": 5,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-20T12:00:00-05:00",
+    "venue": "เอ็นอาร์จี สเตเดียม (Houston)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 36,
+    "group": "F",
+    "team1": "ตูนิเซีย",
+    "team2": "ญี่ปุ่น",
+    "score1": 0,
+    "score2": 4,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-20T22:00:00-05:00",
+    "venue": "สนามกีฬาบีบีวีเอ (Estadio Monterrey)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 37,
+    "group": "G",
+    "team1": "เบลเยียม",
+    "team2": "อิหร่าน",
+    "score1": 0,
+    "score2": 0,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-21T12:00:00-07:00",
+    "venue": "โลสแอนเจลิส สเตเดียม (SoFi Stadium)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 38,
+    "group": "G",
+    "team1": "นิวซีแลนด์",
+    "team2": "อียิปต์",
+    "score1": 1,
+    "score2": 3,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-21T18:00:00-07:00",
+    "venue": "บีซี เพลส (Vancouver)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 39,
+    "group": "H",
+    "team1": "สเปน",
+    "team2": "ซาอุดีอาระเบีย",
+    "score1": 4,
+    "score2": 0,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-21T12:00:00-04:00",
+    "venue": "เมอร์เซเดส-เบนซ์ สเตเดียม (Atlanta)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 40,
+    "group": "H",
+    "team1": "อุรุกวัย",
+    "team2": "เคปเวิร์ด",
+    "score1": 2,
+    "score2": 2,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-21T18:00:00-04:00",
+    "venue": "สนามกีฬาฮาร์ดร็อค (Miami)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 41,
+    "group": "I",
+    "team1": "ฝรั่งเศส",
+    "team2": "อิรัก",
+    "score1": 3,
+    "score2": 0,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-22T17:00:00-04:00",
+    "venue": "ลินคอล์น ไฟแนนเชียล ฟิลด์ (Philadelphia)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 42,
+    "group": "I",
+    "team1": "นอร์เวย์",
+    "team2": "เซเนกัล",
+    "score1": 3,
+    "score2": 2,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-22T20:00:00-04:00",
+    "venue": "เม็ทไลฟ์ สเตเดียม (East Rutherford)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 43,
+    "group": "J",
+    "team1": "อาร์เจนตินา",
+    "team2": "ออสเตรีย",
+    "score1": 2,
+    "score2": 0,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-22T12:00:00-05:00",
+    "venue": "เอทีแอนด์ที สเตเดียม (Arlington)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 44,
+    "group": "J",
+    "team1": "จอร์แดน",
+    "team2": "แอลจีเรีย",
+    "score1": 1,
+    "score2": 2,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-22T20:00:00-07:00",
+    "venue": "ลีวายส์ สเตเดียม (Santa Clara)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 45,
+    "group": "K",
+    "team1": "โปรตุเกส",
+    "team2": "อุซเบกิสถาน",
+    "score1": 5,
+    "score2": 0,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-23T12:00:00-05:00",
+    "venue": "เอ็นอาร์จี สเตเดียม (Houston)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 46,
+    "group": "L",
+    "team1": "ปานามา",
+    "team2": "โครเอเชีย",
+    "score1": 0,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-23T19:00:00-04:00",
+    "venue": "สนามกีฬาโตรอนโต (BMO Field)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 47,
+    "group": "K",
+    "team1": "โคลอมเบีย",
+    "team2": "ดีอาร์ คองโก",
+    "score1": 0,
+    "score2": 0,
+    "status": "LIVE",
+    "minute": 45,
+    "date": "2026-06-23T20:00:00-05:00",
+    "venue": "สนามกีฬากัวดาลาฮารา (Estadio Akron)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 48,
+    "group": "L",
+    "team1": "อังกฤษ",
+    "team2": "กานา",
+    "score1": 0,
+    "score2": 0,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-23T16:00:00-04:00",
+    "venue": "ยิลเล็ตต์ สเตเดียม (Boston)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 49,
+    "group": "C",
+    "team1": "สกอตแลนด์",
+    "team2": "บราซิล",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-24T18:00:00-04:00",
+    "venue": "สนามกีฬาฮาร์ดร็อค (Miami)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 50,
+    "group": "C",
+    "team1": "โมร็อกโก",
+    "team2": "ไฮติ",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-24T18:00:00-04:00",
+    "venue": "เมอร์เซเดส-เบนซ์ สเตเดียม (Atlanta)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 51,
+    "group": "A",
+    "team1": "แอฟริกาใต้",
+    "team2": "เกาหลีใต้",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-24T19:00:00-05:00",
+    "venue": "สนามกีฬาบีบีวีเอ (Estadio Monterrey)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 52,
+    "group": "A",
+    "team1": "เช็กเกีย",
+    "team2": "เม็กซิโก",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-24T19:00:00-05:00",
+    "venue": "สนามกีฬากลางเม็กซิโกซิตี้ (Estadio Azteca)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 53,
+    "group": "B",
+    "team1": "บอสเนียและเฮอร์เซโกวีนา",
+    "team2": "กาตาร์",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-24T12:00:00-07:00",
+    "venue": "สนามกีฬาลูเมนฟิลด์ (Seattle)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 54,
+    "group": "B",
+    "team1": "สวิตเซอร์แลนด์",
+    "team2": "แคนาดา",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-24T12:00:00-07:00",
+    "venue": "บีซี เพลส (Vancouver)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 55,
+    "group": "E",
+    "team1": "กูราเซา",
+    "team2": "ไอวอรีโคสต์",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-25T16:00:00-04:00",
+    "venue": "ลินคอล์น ไฟแนนเชียล ฟิลด์ (Philadelphia)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 56,
+    "group": "E",
+    "team1": "เอกวาดอร์",
+    "team2": "เยอรมนี",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-25T16:00:00-04:00",
+    "venue": "เม็ทไลฟ์ สเตเดียม (East Rutherford)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 57,
+    "group": "D",
+    "team1": "ปารากวัย",
+    "team2": "ออสเตรเลีย",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-25T19:00:00-07:00",
+    "venue": "ลีวายส์ สเตเดียม (Santa Clara)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 58,
+    "group": "D",
+    "team1": "ตุรกี",
+    "team2": "สหรัฐอเมริกา",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-25T19:00:00-07:00",
+    "venue": "โลสแอนเจลิส สเตเดียม (SoFi Stadium)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 59,
+    "group": "F",
+    "team1": "ญี่ปุ่น",
+    "team2": "สวีเดน",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-25T18:00:00-05:00",
+    "venue": "เอทีแอนด์ที สเตเดียม (Arlington)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 60,
+    "group": "F",
+    "team1": "ตูนิเซีย",
+    "team2": "เนเธอร์แลนด์",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-25T18:00:00-05:00",
+    "venue": "สนามกีฬาลูกศร (Arrowhead Stadium)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 61,
+    "group": "I",
+    "team1": "เซเนกัล",
+    "team2": "อิรัก",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-26T15:00:00-04:00",
+    "venue": "สนามกีฬาโตรอนโต (BMO Field)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 62,
+    "group": "I",
+    "team1": "นอร์เวย์",
+    "team2": "ฝรั่งเศส",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-26T15:00:00-04:00",
+    "venue": "ยิลเล็ตต์ สเตเดียม (Boston)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 63,
+    "group": "G",
+    "team1": "อียิปต์",
+    "team2": "อิหร่าน",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-26T20:00:00-07:00",
+    "venue": "สนามกีฬาลูเมนฟิลด์ (Seattle)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 64,
+    "group": "G",
+    "team1": "นิวซีแลนด์",
+    "team2": "เบลเยียม",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-26T20:00:00-07:00",
+    "venue": "บีซี เพลส (Vancouver)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 65,
+    "group": "H",
+    "team1": "เคปเวิร์ด",
+    "team2": "ซาอุดีอาระเบีย",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-26T19:00:00-05:00",
+    "venue": "เอ็นอาร์จี สเตเดียม (Houston)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 66,
+    "group": "H",
+    "team1": "อุรุกวัย",
+    "team2": "สเปน",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-26T18:00:00-05:00",
+    "venue": "สนามกีฬากัวดาลาฮารา (Estadio Akron)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 67,
+    "group": "L",
+    "team1": "ปานามา",
+    "team2": "อังกฤษ",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-27T17:00:00-04:00",
+    "venue": "เม็ทไลฟ์ สเตเดียม (East Rutherford)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 68,
+    "group": "L",
+    "team1": "โครเอเชีย",
+    "team2": "กานา",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-27T17:00:00-04:00",
+    "venue": "ลินคอล์น ไฟแนนเชียล ฟิลด์ (Philadelphia)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 69,
+    "group": "J",
+    "team1": "แอลจีเรีย",
+    "team2": "ออสเตรีย",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-27T21:00:00-05:00",
+    "venue": "สนามกีฬาลูกศร (Arrowhead Stadium)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 70,
+    "group": "J",
+    "team1": "จอร์แดน",
+    "team2": "อาร์เจนตินา",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-27T21:00:00-05:00",
+    "venue": "เอทีแอนด์ที สเตเดียม (Arlington)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 71,
+    "group": "K",
+    "team1": "โคลอมเบีย",
+    "team2": "โปรตุเกส",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-27T19:30:00-04:00",
+    "venue": "สนามกีฬาฮาร์ดร็อค (Miami)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 72,
+    "group": "K",
+    "team1": "ดีอาร์ คองโก",
+    "team2": "อุซเบกิสถาน",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-06-27T19:30:00-04:00",
+    "venue": "เมอร์เซเดส-เบนซ์ สเตเดียม (Atlanta)",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
   }
 ];
+
 
 // สำเนาข้อมูลเพื่อการจำลองเหตุการณ์
 let matches = JSON.parse(JSON.stringify(INITIAL_MATCHES));
@@ -987,6 +3987,33 @@ async function fetchRealWorldMatches() {
 
           events.sort((a, b) => a.minute - b.minute);
           match.events = events;
+
+          // If match stats are empty or zeroed out, populate them with realistic values based on the score
+          if (finished || isLive) {
+            if (!match.stats || !match.stats.shots || match.stats.shots[0] === 0) {
+              const shots1 = Math.max(score1Val + 2, Math.floor(Math.random() * 10) + 5);
+              const shots2 = Math.max(score2Val + 2, Math.floor(Math.random() * 10) + 5);
+              const target1 = Math.max(score1Val, Math.floor(shots1 * (0.3 + Math.random() * 0.3)));
+              const target2 = Math.max(score2Val, Math.floor(shots2 * (0.3 + Math.random() * 0.3)));
+              const possession1 = 40 + Math.floor(Math.random() * 21);
+              
+              const red1 = events.filter(e => e.type === 'RED' && e.team === match.team1).length;
+              const red2 = events.filter(e => e.type === 'RED' && e.team === match.team2).length;
+              const yellow1 = events.filter(e => e.type === 'YELLOW' && e.team === match.team1).length || Math.floor(Math.random() * 3);
+              const yellow2 = events.filter(e => e.type === 'YELLOW' && e.team === match.team2).length || Math.floor(Math.random() * 3);
+
+              match.stats = {
+                possession: [possession1, 100 - possession1],
+                shots: [shots1, shots2],
+                shotsOnTarget: [target1, target2],
+                fouls: [8 + Math.floor(Math.random() * 8), 8 + Math.floor(Math.random() * 8)],
+                corners: [2 + Math.floor(Math.random() * 6), 2 + Math.floor(Math.random() * 6)],
+                offsides: [Math.floor(Math.random() * 4), Math.floor(Math.random() * 4)],
+                yellowCards: [yellow1, yellow2],
+                redCards: [red1, red2]
+              };
+            }
+          }
         }
       });
       console.log(`[FIFA Scraper] Successfully updated ${data.games.length} matches from real-world API.`);
