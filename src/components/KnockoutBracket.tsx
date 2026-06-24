@@ -33,6 +33,20 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
     setPrevStandings(standings);
   }
 
+  // ฟังก์ชันคำนวณหาว่าประเทศนี้มาจากกลุ่มใดและอันดับใด
+  const getTeamOriginString = (teamName: string): string => {
+    if (!teamName || teamName.includes('ผู้ชนะ') || teamName.includes('อันดับ') || teamName.includes('Winner') || teamName.includes('Runner-up') || teamName.includes('Best 3rd')) {
+      return '';
+    }
+    for (const [group, teams] of Object.entries(standings)) {
+      const idx = teams.findIndex(t => t.team === teamName);
+      if (idx !== -1) {
+        return ` (${group}${idx + 1})`;
+      }
+    }
+    return '';
+  };
+
   // ฟังก์ชันแปลข้อความ Placeholder เป็นภาษาอังกฤษ
   const translatePlaceholder = (text: string): string => {
     if (lang === 'th') return text;
@@ -253,7 +267,7 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
       let displayName: string;
       if (!isPlaceholder) {
         flag = getTeamFlag(teamName);
-        displayName = translateTeam(teamName, lang);
+        displayName = `${translateTeam(teamName, lang)}${getTeamOriginString(teamName)}`;
       } else {
         displayName = translatePlaceholder(teamName);
       }
@@ -334,7 +348,7 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
     ctx.font = 'bold 14px "Inter", sans-serif';
     if (champion) {
       const cFlag = getTeamFlag(champion);
-      const cName = translateTeam(champion, lang);
+      const cName = `${translateTeam(champion, lang)}${getTeamOriginString(champion)}`;
       ctx.fillText(`${cFlag} ${cName}`, finalX, 545);
     } else {
       ctx.fillStyle = '#64748b';
@@ -389,7 +403,7 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
         >
           <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>
             {!isT1Placeholder && <span style={{ fontSize: '1.1rem' }}>{getTeamFlag(match.t1)}</span>}
-            <span style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>{isT1Placeholder ? translatePlaceholder(match.t1) : translateTeam(match.t1, lang)}</span>
+            <span style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>{isT1Placeholder ? translatePlaceholder(match.t1) : `${translateTeam(match.t1, lang)}${getTeamOriginString(match.t1)}`}</span>
           </span>
           {isT1Winner && <span style={{ color: 'var(--green)', fontSize: '0.75rem' }}>✓</span>}
         </div>
@@ -413,7 +427,7 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
         >
           <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>
             {!isT2Placeholder && <span style={{ fontSize: '1.1rem' }}>{getTeamFlag(match.t2)}</span>}
-            <span style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>{isT2Placeholder ? translatePlaceholder(match.t2) : translateTeam(match.t2, lang)}</span>
+            <span style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>{isT2Placeholder ? translatePlaceholder(match.t2) : `${translateTeam(match.t2, lang)}${getTeamOriginString(match.t2)}`}</span>
           </span>
           {isT2Winner && <span style={{ color: 'var(--green)', fontSize: '0.75rem' }}>✓</span>}
         </div>
@@ -517,7 +531,7 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
               {champion ? (
                 <div style={{ fontSize: '1.1rem', fontWeight: '800', color: '#fff', display: 'flex', alignItems: 'center', gap: '0.35rem', justifyContent: 'center' }}>
                   <span>{getTeamFlag(champion)}</span>
-                  <span>{translateTeam(champion, lang)}</span>
+                  <span>{translateTeam(champion, lang)}{getTeamOriginString(champion)}</span>
                 </div>
               ) : (
                 <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{t('koWait', lang)}</span>
