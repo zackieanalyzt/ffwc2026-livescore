@@ -47,6 +47,48 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
     return '';
   };
 
+  // ฟังก์ชันแสดงวันที่แข่งขันของแต่ละแมตช์รอบน็อกเอาต์
+  const getMatchDate = (matchId: string): string => {
+    const dates: Record<string, { th: string; en: string }> = {
+      R32_1: { th: '30 มิ.ย. 2026', en: 'Jun 30, 2026' },
+      R32_2: { th: '28 มิ.ย. 2026', en: 'Jun 28, 2026' },
+      R32_3: { th: '2 ก.ค. 2026', en: 'Jul 2, 2026' },
+      R32_4: { th: '29 มิ.ย. 2026', en: 'Jun 29, 2026' },
+      R32_5: { th: '29 มิ.ย. 2026', en: 'Jun 29, 2026' },
+      R32_6: { th: '1 ก.ค. 2026', en: 'Jul 1, 2026' },
+      R32_7: { th: '30 มิ.ย. 2026', en: 'Jun 30, 2026' },
+      R32_8: { th: '29 มิ.ย. 2026', en: 'Jun 29, 2026' },
+      R32_9: { th: '1 ก.ค. 2026', en: 'Jul 1, 2026' },
+      R32_10: { th: '1 ก.ค. 2026', en: 'Jul 1, 2026' },
+      R32_11: { th: '30 มิ.ย. 2026', en: 'Jun 30, 2026' },
+      R32_12: { th: '2 ก.ค. 2026', en: 'Jul 2, 2026' },
+      R32_13: { th: '2 ก.ค. 2026', en: 'Jul 2, 2026' },
+      R32_14: { th: '3 ก.ค. 2026', en: 'Jul 3, 2026' },
+      R32_15: { th: '3 ก.ค. 2026', en: 'Jul 3, 2026' },
+      R32_16: { th: '3 ก.ค. 2026', en: 'Jul 3, 2026' },
+      
+      R16_1: { th: '4 ก.ค. 2026', en: 'Jul 4, 2026' },
+      R16_2: { th: '4 ก.ค. 2026', en: 'Jul 4, 2026' },
+      R16_3: { th: '5 ก.ค. 2026', en: 'Jul 5, 2026' },
+      R16_4: { th: '5 ก.ค. 2026', en: 'Jul 5, 2026' },
+      R16_5: { th: '6 ก.ค. 2026', en: 'Jul 6, 2026' },
+      R16_6: { th: '6 ก.ค. 2026', en: 'Jul 6, 2026' },
+      R16_7: { th: '7 ก.ค. 2026', en: 'Jul 7, 2026' },
+      R16_8: { th: '7 ก.ค. 2026', en: 'Jul 7, 2026' },
+      
+      QF_1: { th: '9 ก.ค. 2026', en: 'Jul 9, 2026' },
+      QF_2: { th: '10 ก.ค. 2026', en: 'Jul 10, 2026' },
+      QF_3: { th: '11 ก.ค. 2026', en: 'Jul 11, 2026' },
+      QF_4: { th: '11 ก.ค. 2026', en: 'Jul 11, 2026' },
+      
+      SF_1: { th: '14 ก.ค. 2026', en: 'Jul 14, 2026' },
+      SF_2: { th: '15 ก.ค. 2026', en: 'Jul 15, 2026' },
+      
+      FINAL: { th: '19 ก.ค. 2026', en: 'Jul 19, 2026' }
+    };
+    return dates[matchId]?.[lang] || '';
+  };
+
   // ฟังก์ชันแปลข้อความ Placeholder เป็นภาษาอังกฤษ
   const translatePlaceholder = (text: string): string => {
     if (lang === 'th') return text;
@@ -384,6 +426,12 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
         position: 'relative',
         boxShadow: winners[match.id] ? '0 0 10px rgba(6,182,212,0.05)' : 'none'
       }}>
+        {/* หัวการ์ดแสดงรอบและวันที่แข่ง */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.65rem', color: 'var(--text-muted)', borderBottom: '1px solid rgba(255,255,255,0.04)', paddingBottom: '0.2rem', marginBottom: '0.1rem' }}>
+          <span style={{ fontWeight: '600' }}>{match.id.replace('_', ' ')}</span>
+          <span style={{ color: 'var(--cyan)' }}>{getMatchDate(match.id)}</span>
+        </div>
+
         {/* ทีม 1 */}
         <div 
           onClick={() => handleSelectWinner(match.id, match.t1)}
