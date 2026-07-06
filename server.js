@@ -93,35 +93,48 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-11T13:00:00-05:00",
     "venue": "สนามกีฬากลางเม็กซิโกซิตี้ (Estadio Azteca)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 9,
+        "team": "เม็กซิโก",
+        "player": "J. Quiñones"
+      },
+      {
+        "type": "GOAL",
+        "minute": 67,
+        "team": "เม็กซิโก",
+        "player": "R. Jiménez"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        48,
+        52
       ],
       "shots": [
-        0,
-        0
+        5,
+        5
       ],
       "shotsOnTarget": [
-        0,
-        0
+        2,
+        1
       ],
       "fouls": [
-        0,
-        0
+        12,
+        13
       ],
       "corners": [
-        0,
-        0
+        7,
+        5
       ],
       "offsides": [
-        0,
-        0
+        3,
+        2
       ],
       "yellowCards": [
         0,
-        0
+        2
       ],
       "redCards": [
         0,
@@ -140,34 +153,53 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-11T20:00:00-05:00",
     "venue": "สนามกีฬากัวดาลาฮารา (Estadio Akron)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 59,
+        "team": "เช็กเกีย",
+        "player": "L. Krejčí"
+      },
+      {
+        "type": "GOAL",
+        "minute": 67,
+        "team": "เกาหลีใต้",
+        "player": "I.B. Hwang"
+      },
+      {
+        "type": "GOAL",
+        "minute": 80,
+        "team": "เกาหลีใต้",
+        "player": "H.G. Oh"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        59,
+        41
       ],
       "shots": [
-        0,
-        0
+        11,
+        5
       ],
       "shotsOnTarget": [
-        0,
-        0
+        3,
+        2
       ],
       "fouls": [
-        0,
-        0
+        10,
+        9
       ],
       "corners": [
-        0,
-        0
+        4,
+        7
       ],
       "offsides": [
         0,
         0
       ],
       "yellowCards": [
-        0,
+        2,
         0
       ],
       "redCards": [
@@ -187,35 +219,48 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-12T15:00:00-04:00",
     "venue": "สนามกีฬาโตรอนโต (BMO Field)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 11,
+        "team": "แคนาดา",
+        "player": "C. Larin"
+      },
+      {
+        "type": "GOAL",
+        "minute": 21,
+        "team": "บอสเนียและเฮอร์เซโกวีนา",
+        "player": "Jovo Lukić"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        53,
+        47
       ],
       "shots": [
-        0,
-        0
+        5,
+        14
       ],
       "shotsOnTarget": [
-        0,
-        0
+        2,
+        6
       ],
       "fouls": [
-        0,
-        0
+        10,
+        13
       ],
       "corners": [
-        0,
-        0
+        3,
+        6
       ],
       "offsides": [
-        0,
-        0
+        1,
+        3
       ],
       "yellowCards": [
-        0,
-        0
+        2,
+        1
       ],
       "redCards": [
         0,
@@ -234,34 +279,53 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-12T18:00:00-07:00",
     "venue": "โลสแอนเจลิส สเตเดียม (SoFi Stadium)",
-    "events": [],
+    "events": [
+      {
+        "type": "OWN",
+        "minute": 7,
+        "team": "สหรัฐอเมริกา",
+        "player": "D. Bobadilla"
+      },
+      {
+        "type": "GOAL",
+        "minute": 31,
+        "team": "สหรัฐอเมริกา",
+        "player": "F. Balogun"
+      },
+      {
+        "type": "GOAL",
+        "minute": 73,
+        "team": "ปารากวัย",
+        "player": "Maurício"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        60,
+        40
       ],
       "shots": [
-        0,
-        0
+        9,
+        13
       ],
       "shotsOnTarget": [
-        0,
-        0
+        4,
+        7
       ],
       "fouls": [
-        0,
-        0
+        9,
+        12
       ],
       "corners": [
-        0,
-        0
+        7,
+        6
       ],
       "offsides": [
-        0,
+        3,
         0
       ],
       "yellowCards": [
-        0,
+        1,
         0
       ],
       "redCards": [
@@ -281,30 +345,37 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-13T21:00:00-04:00",
     "venue": "ยิลเล็ตต์ สเตเดียม (Boston)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 28,
+        "team": "สกอตแลนด์",
+        "player": "J. McGinn"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        52,
+        48
       ],
       "shots": [
-        0,
-        0
+        5,
+        5
       ],
       "shotsOnTarget": [
-        0,
-        0
+        2,
+        2
       ],
       "fouls": [
-        0,
-        0
+        12,
+        15
       ],
       "corners": [
-        0,
-        0
+        5,
+        3
       ],
       "offsides": [
-        0,
+        3,
         0
       ],
       "yellowCards": [
@@ -328,35 +399,48 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-13T21:00:00-07:00",
     "venue": "บีซี เพลส (Vancouver)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 27,
+        "team": "ออสเตรเลีย",
+        "player": "Nestory Irankunda"
+      },
+      {
+        "type": "GOAL",
+        "minute": 75,
+        "team": "ออสเตรเลีย",
+        "player": "C. Metcalfe"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        58,
+        42
       ],
       "shots": [
-        0,
-        0
+        6,
+        8
       ],
       "shotsOnTarget": [
-        0,
-        0
+        3,
+        4
       ],
       "fouls": [
-        0,
-        0
+        12,
+        10
       ],
       "corners": [
-        0,
-        0
+        5,
+        6
       ],
       "offsides": [
-        0,
+        1,
         0
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        1
       ],
       "redCards": [
         0,
@@ -375,35 +459,48 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-13T18:00:00-04:00",
     "venue": "เม็ทไลฟ์ สเตเดียม (East Rutherford)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 21,
+        "team": "โมร็อกโก",
+        "player": "I. Saibari"
+      },
+      {
+        "type": "GOAL",
+        "minute": 32,
+        "team": "บราซิล",
+        "player": "V. Júnior"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        59,
+        41
       ],
       "shots": [
-        0,
-        0
+        13,
+        13
       ],
       "shotsOnTarget": [
-        0,
-        0
+        5,
+        7
       ],
       "fouls": [
-        0,
-        0
+        12,
+        13
       ],
       "corners": [
-        0,
-        0
+        2,
+        5
       ],
       "offsides": [
-        0,
-        0
+        1,
+        1
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        1
       ],
       "redCards": [
         0,
@@ -422,35 +519,42 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-13T12:00:00-07:00",
     "venue": "ลีวายส์ สเตเดียม (Santa Clara)",
-    "events": [],
+    "events": [
+      {
+        "type": "PENALTY",
+        "minute": 17,
+        "team": "สวิตเซอร์แลนด์",
+        "player": "Breel Embolo"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        45,
+        55
       ],
       "shots": [
-        0,
-        0
+        10,
+        14
       ],
       "shotsOnTarget": [
-        0,
-        0
+        4,
+        5
       ],
       "fouls": [
-        0,
-        0
+        15,
+        11
       ],
       "corners": [
-        0,
-        0
+        2,
+        2
       ],
       "offsides": [
-        0,
+        3,
         0
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        1
       ],
       "redCards": [
         0,
@@ -469,35 +573,42 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-14T19:00:00-04:00",
     "venue": "ลินคอล์น ไฟแนนเชียล ฟิลด์ (Philadelphia)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "ไอวอรีโคสต์",
+        "player": "A. Diallo"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        55,
+        45
       ],
       "shots": [
-        0,
-        0
+        7,
+        10
       ],
       "shotsOnTarget": [
-        0,
-        0
+        4,
+        3
       ],
       "fouls": [
-        0,
-        0
+        11,
+        15
       ],
       "corners": [
-        0,
-        0
+        3,
+        2
       ],
       "offsides": [
         0,
-        0
+        3
       ],
       "yellowCards": [
-        0,
-        0
+        2,
+        1
       ],
       "redCards": [
         0,
@@ -516,35 +627,78 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-14T12:00:00-05:00",
     "venue": "เอ็นอาร์จี สเตเดียม (Houston)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 7,
+        "team": "เยอรมนี",
+        "player": "Felix Nmecha"
+      },
+      {
+        "type": "GOAL",
+        "minute": 21,
+        "team": "กูราเซา",
+        "player": "L. Comenencia"
+      },
+      {
+        "type": "GOAL",
+        "minute": 38,
+        "team": "เยอรมนี",
+        "player": "N. Schlotterbeck"
+      },
+      {
+        "type": "GOAL",
+        "minute": 47,
+        "team": "เยอรมนี",
+        "player": "J. Musiala"
+      },
+      {
+        "type": "GOAL",
+        "minute": 68,
+        "team": "เยอรมนี",
+        "player": "N. Brown"
+      },
+      {
+        "type": "GOAL",
+        "minute": 78,
+        "team": "เยอรมนี",
+        "player": "D. Undav"
+      },
+      {
+        "type": "GOAL",
+        "minute": 88,
+        "team": "เยอรมนี",
+        "player": "K. Havertz"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        55,
+        45
       ],
       "shots": [
-        0,
-        0
+        9,
+        12
       ],
       "shotsOnTarget": [
-        0,
-        0
+        7,
+        6
       ],
       "fouls": [
-        0,
-        0
+        12,
+        8
       ],
       "corners": [
-        0,
-        0
+        4,
+        6
       ],
       "offsides": [
         0,
-        0
+        2
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        1
       ],
       "redCards": [
         0,
@@ -563,35 +717,60 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-14T15:00:00-05:00",
     "venue": "เอทีแอนด์ที สเตเดียม (Arlington)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 51,
+        "team": "เนเธอร์แลนด์",
+        "player": "Virgil van Dijk"
+      },
+      {
+        "type": "GOAL",
+        "minute": 57,
+        "team": "ญี่ปุ่น",
+        "player": "K. Nakamura"
+      },
+      {
+        "type": "GOAL",
+        "minute": 64,
+        "team": "เนเธอร์แลนด์",
+        "player": "C. Summerville"
+      },
+      {
+        "type": "GOAL",
+        "minute": 89,
+        "team": "ญี่ปุ่น",
+        "player": "K. Ogawa"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        53,
+        47
       ],
       "shots": [
-        0,
-        0
+        12,
+        10
       ],
       "shotsOnTarget": [
-        0,
-        0
+        5,
+        4
       ],
       "fouls": [
-        0,
-        0
+        9,
+        11
       ],
       "corners": [
-        0,
-        0
+        7,
+        6
       ],
       "offsides": [
-        0,
-        0
+        3,
+        3
       ],
       "yellowCards": [
-        0,
-        0
+        2,
+        1
       ],
       "redCards": [
         0,
@@ -610,35 +789,66 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-14T20:00:00-05:00",
     "venue": "สนามกีฬาบีบีวีเอ (Estadio Monterrey)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 7,
+        "team": "สวีเดน",
+        "player": "Y.Ayari"
+      },
+      {
+        "type": "GOAL",
+        "minute": 30,
+        "team": "สวีเดน",
+        "player": "A. Isak"
+      },
+      {
+        "type": "GOAL",
+        "minute": 43,
+        "team": "ตูนิเซีย",
+        "player": "O. Rekik"
+      },
+      {
+        "type": "GOAL",
+        "minute": 59,
+        "team": "สวีเดน",
+        "player": "V. Gyökeres"
+      },
+      {
+        "type": "GOAL",
+        "minute": 84,
+        "team": "สวีเดน",
+        "player": "M. Svanberg"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        45,
+        55
       ],
       "shots": [
-        0,
-        0
+        12,
+        14
       ],
       "shotsOnTarget": [
-        0,
-        0
+        5,
+        5
       ],
       "fouls": [
-        0,
-        0
+        13,
+        11
       ],
       "corners": [
-        0,
-        0
+        6,
+        2
       ],
       "offsides": [
-        0,
+        1,
         0
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        1
       ],
       "redCards": [
         0,
@@ -657,35 +867,60 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-15T18:00:00-07:00",
     "venue": "โลสแอนเจลิส สเตเดียม (SoFi Stadium)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 7,
+        "team": "นิวซีแลนด์",
+        "player": "Elijah Just"
+      },
+      {
+        "type": "GOAL",
+        "minute": 32,
+        "team": "อิหร่าน",
+        "player": "Ramin Rezaiian"
+      },
+      {
+        "type": "GOAL",
+        "minute": 54,
+        "team": "นิวซีแลนด์",
+        "player": "Elijah Just"
+      },
+      {
+        "type": "GOAL",
+        "minute": 64,
+        "team": "อิหร่าน",
+        "player": "Mohammad Mohebi"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        40,
+        60
       ],
       "shots": [
-        0,
-        0
+        6,
+        7
       ],
       "shotsOnTarget": [
-        0,
-        0
+        3,
+        3
       ],
       "fouls": [
-        0,
-        0
+        15,
+        15
       ],
       "corners": [
-        0,
-        0
+        5,
+        4
       ],
       "offsides": [
-        0,
-        0
+        1,
+        3
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        1
       ],
       "redCards": [
         0,
@@ -707,32 +942,32 @@ let INITIAL_MATCHES = [
     "events": [],
     "stats": {
       "possession": [
-        50,
-        50
+        54,
+        46
       ],
       "shots": [
-        0,
-        0
+        14,
+        6
       ],
       "shotsOnTarget": [
-        0,
-        0
+        7,
+        2
       ],
       "fouls": [
-        0,
-        0
+        10,
+        10
       ],
       "corners": [
-        0,
-        0
+        2,
+        6
       ],
       "offsides": [
-        0,
-        0
+        3,
+        1
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        2
       ],
       "redCards": [
         0,
@@ -751,34 +986,47 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-15T12:00:00-07:00",
     "venue": "สนามกีฬาลูเมนฟิลด์ (Seattle)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 20,
+        "team": "อียิปต์",
+        "player": "Emam Ashour"
+      },
+      {
+        "type": "GOAL",
+        "minute": 66,
+        "team": "เบลเยียม",
+        "player": "Mohamed Hany"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        45,
+        55
       ],
       "shots": [
-        0,
-        0
+        11,
+        5
       ],
       "shotsOnTarget": [
-        0,
-        0
+        6,
+        2
       ],
       "fouls": [
-        0,
-        0
+        11,
+        8
       ],
       "corners": [
-        0,
-        0
+        2,
+        6
       ],
       "offsides": [
-        0,
+        1,
         0
       ],
       "yellowCards": [
-        0,
+        2,
         0
       ],
       "redCards": [
@@ -798,35 +1046,48 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-15T18:00:00-04:00",
     "venue": "สนามกีฬาฮาร์ดร็อค (Miami)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 41,
+        "team": "ซาอุดีอาระเบีย",
+        "player": "Abdulelah Al-Amri"
+      },
+      {
+        "type": "GOAL",
+        "minute": 80,
+        "team": "อุรุกวัย",
+        "player": "Maximiliano Araújo"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        60,
+        40
       ],
       "shots": [
-        0,
-        0
+        5,
+        8
       ],
       "shotsOnTarget": [
-        0,
-        0
+        1,
+        4
       ],
       "fouls": [
-        0,
-        0
+        10,
+        13
       ],
       "corners": [
-        0,
-        0
+        4,
+        5
       ],
       "offsides": [
-        0,
+        1,
         0
       ],
       "yellowCards": [
-        0,
-        0
+        2,
+        2
       ],
       "redCards": [
         0,
@@ -845,35 +1106,60 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-16T15:00:00-04:00",
     "venue": "เม็ทไลฟ์ สเตเดียม (East Rutherford)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 66,
+        "team": "ฝรั่งเศส",
+        "player": "K. Mbappé"
+      },
+      {
+        "type": "GOAL",
+        "minute": 82,
+        "team": "ฝรั่งเศส",
+        "player": "B. Barcola"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "ฝรั่งเศส",
+        "player": "K. Mbappé"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "เซเนกัล",
+        "player": "I. Mbaye"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        45,
+        55
       ],
       "shots": [
-        0,
-        0
+        6,
+        9
       ],
       "shotsOnTarget": [
-        0,
-        0
+        3,
+        3
       ],
       "fouls": [
-        0,
-        0
+        8,
+        10
       ],
       "corners": [
-        0,
-        0
+        5,
+        3
       ],
       "offsides": [
-        0,
-        0
+        2,
+        2
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        1
       ],
       "redCards": [
         0,
@@ -892,35 +1178,66 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-16T18:00:00-04:00",
     "venue": "ยิลเล็ตต์ สเตเดียม (Boston)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 29,
+        "team": "นอร์เวย์",
+        "player": "Erling Haaland"
+      },
+      {
+        "type": "GOAL",
+        "minute": 39,
+        "team": "อิรัก",
+        "player": "Aymen Hussein"
+      },
+      {
+        "type": "GOAL",
+        "minute": 43,
+        "team": "นอร์เวย์",
+        "player": "Erling Haaland"
+      },
+      {
+        "type": "GOAL",
+        "minute": 76,
+        "team": "นอร์เวย์",
+        "player": "Leo Østigård"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "นอร์เวย์",
+        "player": "Aymen Hussein"
+      }
+    ],
     "stats": {
       "possession": [
         50,
         50
       ],
       "shots": [
-        0,
-        0
+        5,
+        9
       ],
       "shotsOnTarget": [
-        0,
-        0
+        2,
+        4
       ],
       "fouls": [
-        0,
-        0
+        12,
+        10
       ],
       "corners": [
-        0,
-        0
+        7,
+        2
       ],
       "offsides": [
-        0,
+        1,
         0
       ],
       "yellowCards": [
-        0,
-        0
+        2,
+        1
       ],
       "redCards": [
         0,
@@ -939,34 +1256,53 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-16T20:00:00-05:00",
     "venue": "สนามกีฬาลูกศร (Arrowhead Stadium)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 17,
+        "team": "อาร์เจนตินา",
+        "player": "Lionel Messi"
+      },
+      {
+        "type": "GOAL",
+        "minute": 60,
+        "team": "อาร์เจนตินา",
+        "player": "Lionel Messi"
+      },
+      {
+        "type": "GOAL",
+        "minute": 76,
+        "team": "อาร์เจนตินา",
+        "player": "Lionel Messi"
+      }
+    ],
     "stats": {
       "possession": [
         50,
         50
       ],
       "shots": [
-        0,
-        0
+        10,
+        13
       ],
       "shotsOnTarget": [
-        0,
-        0
+        3,
+        6
       ],
       "fouls": [
-        0,
-        0
+        9,
+        9
       ],
       "corners": [
-        0,
-        0
+        2,
+        7
       ],
       "offsides": [
-        0,
-        0
+        3,
+        1
       ],
       "yellowCards": [
-        0,
+        2,
         0
       ],
       "redCards": [
@@ -986,35 +1322,54 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-16T21:00:00-07:00",
     "venue": "ลีวายส์ สเตเดียม (Santa Clara)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 21,
+        "team": "ออสเตรีย",
+        "player": "Rvmanv Ashmid"
+      },
+      {
+        "type": "GOAL",
+        "minute": 50,
+        "team": "จอร์แดน",
+        "player": "Ali Avlvan"
+      },
+      {
+        "type": "GOAL",
+        "minute": 76,
+        "team": "ออสเตรีย",
+        "player": "Izn Alarb"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        57,
+        43
       ],
       "shots": [
-        0,
-        0
+        5,
+        6
       ],
       "shotsOnTarget": [
-        0,
-        0
+        3,
+        2
       ],
       "fouls": [
-        0,
-        0
+        14,
+        10
       ],
       "corners": [
-        0,
-        0
+        6,
+        2
       ],
       "offsides": [
-        0,
+        1,
         0
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        2
       ],
       "redCards": [
         0,
@@ -1033,35 +1388,48 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-17T12:00:00-05:00",
     "venue": "เอ็นอาร์จี สเตเดียม (Houston)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 6,
+        "team": "โปรตุเกส",
+        "player": "J. Neves"
+      },
+      {
+        "type": "GOAL",
+        "minute": 45,
+        "team": "ดีอาร์ คองโก",
+        "player": "Y. Wissa"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        60,
+        40
       ],
       "shots": [
-        0,
-        0
+        9,
+        11
       ],
       "shotsOnTarget": [
-        0,
-        0
+        5,
+        6
       ],
       "fouls": [
-        0,
-        0
+        14,
+        11
       ],
       "corners": [
-        0,
-        0
+        7,
+        7
       ],
       "offsides": [
         0,
-        0
+        3
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        1
       ],
       "redCards": [
         0,
@@ -1080,34 +1448,71 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-17T15:00:00-05:00",
     "venue": "เอทีแอนด์ที สเตเดียม (Arlington)",
-    "events": [],
+    "events": [
+      {
+        "type": "PENALTY",
+        "minute": 12,
+        "team": "อังกฤษ",
+        "player": "H. Kane"
+      },
+      {
+        "type": "GOAL",
+        "minute": 36,
+        "team": "โครเอเชีย",
+        "player": "M. Baturina"
+      },
+      {
+        "type": "GOAL",
+        "minute": 42,
+        "team": "อังกฤษ",
+        "player": "H. Kane"
+      },
+      {
+        "type": "GOAL",
+        "minute": 45,
+        "team": "โครเอเชีย",
+        "player": "P. Musa"
+      },
+      {
+        "type": "GOAL",
+        "minute": 47,
+        "team": "อังกฤษ",
+        "player": "J. Bellingham"
+      },
+      {
+        "type": "GOAL",
+        "minute": 85,
+        "team": "อังกฤษ",
+        "player": "M. Rashford"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        47,
+        53
       ],
       "shots": [
-        0,
-        0
+        10,
+        12
       ],
       "shotsOnTarget": [
-        0,
-        0
+        4,
+        6
       ],
       "fouls": [
-        0,
-        0
+        10,
+        10
       ],
       "corners": [
-        0,
-        0
+        5,
+        2
       ],
       "offsides": [
-        0,
+        3,
         0
       ],
       "yellowCards": [
-        0,
+        2,
         0
       ],
       "redCards": [
@@ -1127,35 +1532,60 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-17T20:00:00-05:00",
     "venue": "สนามกีฬากลางเม็กซิโกซิตี้ (Estadio Azteca)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 40,
+        "team": "โคลอมเบีย",
+        "player": "Dnil Mvnvz"
+      },
+      {
+        "type": "GOAL",
+        "minute": 60,
+        "team": "อุซเบกิสถาน",
+        "player": "Abas Bk Fiz Allh Af"
+      },
+      {
+        "type": "GOAL",
+        "minute": 65,
+        "team": "โคลอมเบีย",
+        "player": "Lviiz Diaz"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "โคลอมเบีย",
+        "player": "Khamintvn Kampaz"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        52,
+        48
       ],
       "shots": [
-        0,
-        0
+        8,
+        8
       ],
       "shotsOnTarget": [
-        0,
-        0
+        4,
+        3
       ],
       "fouls": [
-        0,
-        0
+        15,
+        8
       ],
       "corners": [
-        0,
-        0
+        7,
+        3
       ],
       "offsides": [
         0,
         0
       ],
       "yellowCards": [
-        0,
-        0
+        2,
+        2
       ],
       "redCards": [
         0,
@@ -1174,35 +1604,42 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-17T19:00:00-04:00",
     "venue": "สนามกีฬาโตรอนโต (BMO Field)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "กานา",
+        "player": "Kalb Iirnki"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        43,
+        57
       ],
       "shots": [
-        0,
-        0
+        13,
+        12
       ],
       "shotsOnTarget": [
-        0,
-        0
+        7,
+        6
       ],
       "fouls": [
-        0,
-        0
+        10,
+        8
       ],
       "corners": [
-        0,
-        0
+        5,
+        3
       ],
       "offsides": [
         0,
-        0
+        2
       ],
       "yellowCards": [
         0,
-        0
+        2
       ],
       "redCards": [
         0,
@@ -1221,34 +1658,41 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-18T19:00:00-05:00",
     "venue": "สนามกีฬากัวดาลาฮารา (Estadio Akron)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 50,
+        "team": "เม็กซิโก",
+        "player": "Luis Romo"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        51,
+        49
       ],
       "shots": [
-        0,
-        0
+        8,
+        12
       ],
       "shotsOnTarget": [
-        0,
-        0
+        2,
+        6
       ],
       "fouls": [
-        0,
-        0
+        11,
+        9
       ],
       "corners": [
-        0,
-        0
+        7,
+        5
       ],
       "offsides": [
         0,
-        0
+        3
       ],
       "yellowCards": [
-        0,
+        2,
         0
       ],
       "redCards": [
@@ -1268,35 +1712,60 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-18T12:00:00-07:00",
     "venue": "โลสแอนเจลิส สเตเดียม (SoFi Stadium)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 74,
+        "team": "สวิตเซอร์แลนด์",
+        "player": "Jvhan Mnzambi"
+      },
+      {
+        "type": "GOAL",
+        "minute": 84,
+        "team": "สวิตเซอร์แลนด์",
+        "player": "Rvbn Vargas"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "สวิตเซอร์แลนด์",
+        "player": "Jvhan Mnzambi"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "บอสเนียและเฮอร์เซโกวีนา",
+        "player": "Armin Mhmich"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        44,
+        56
       ],
       "shots": [
-        0,
-        0
+        11,
+        6
       ],
       "shotsOnTarget": [
-        0,
-        0
+        4,
+        3
       ],
       "fouls": [
-        0,
-        0
+        15,
+        12
       ],
       "corners": [
-        0,
-        0
+        7,
+        2
       ],
       "offsides": [
-        0,
-        0
+        3,
+        2
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        2
       ],
       "redCards": [
         0,
@@ -1315,31 +1784,68 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-18T15:00:00-07:00",
     "venue": "บีซี เพลส (Vancouver)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 16,
+        "team": "แคนาดา",
+        "player": "Kail Larin"
+      },
+      {
+        "type": "GOAL",
+        "minute": 29,
+        "team": "แคนาดา",
+        "player": "Jonathan David"
+      },
+      {
+        "type": "GOAL",
+        "minute": 45,
+        "team": "แคนาดา",
+        "player": "Jonathan David"
+      },
+      {
+        "type": "GOAL",
+        "minute": 64,
+        "team": "แคนาดา",
+        "player": "Nathan Saliba"
+      },
+      {
+        "type": "GOAL",
+        "minute": 75,
+        "team": "แคนาดา",
+        "player": "Mohamed Almnai"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "แคนาดา",
+        "player": "Jonathan David"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        40,
+        60
       ],
       "shots": [
-        0,
-        0
+        8,
+        11
       ],
       "shotsOnTarget": [
-        0,
-        0
+        6,
+        3
       ],
       "fouls": [
-        0,
-        0
+        13,
+        14
       ],
       "corners": [
-        0,
-        0
+        2,
+        4
       ],
       "offsides": [
-        0,
-        0
+        2,
+        1
       ],
       "yellowCards": [
         0,
@@ -1362,35 +1868,42 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-18T12:00:00-04:00",
     "venue": "เมอร์เซเดส-เบนซ์ สเตเดียม (Atlanta)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 6,
+        "team": "เช็กเกีย",
+        "player": "‫mikhal Sadilk"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        45,
+        55
       ],
       "shots": [
-        0,
-        0
+        12,
+        13
       ],
       "shotsOnTarget": [
-        0,
-        0
+        4,
+        4
       ],
       "fouls": [
-        0,
-        0
+        10,
+        14
       ],
       "corners": [
-        0,
-        0
+        5,
+        3
       ],
       "offsides": [
         0,
-        0
+        3
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        2
       ],
       "redCards": [
         0,
@@ -1409,35 +1922,54 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-19T21:00:00-04:00",
     "venue": "ลินคอล์น ไฟแนนเชียล ฟิลด์ (Philadelphia)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 23,
+        "team": "บราซิล",
+        "player": "Matheus Cunha"
+      },
+      {
+        "type": "GOAL",
+        "minute": 36,
+        "team": "บราซิล",
+        "player": "Matheus Cunha"
+      },
+      {
+        "type": "GOAL",
+        "minute": 45,
+        "team": "บราซิล",
+        "player": "Vinícius Júnior"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        40,
+        60
       ],
       "shots": [
-        0,
-        0
+        13,
+        6
       ],
       "shotsOnTarget": [
-        0,
-        0
+        5,
+        3
       ],
       "fouls": [
-        0,
-        0
+        10,
+        11
       ],
       "corners": [
-        0,
-        0
+        4,
+        7
       ],
       "offsides": [
-        0,
-        0
+        1,
+        3
       ],
       "yellowCards": [
         0,
-        0
+        1
       ],
       "redCards": [
         0,
@@ -1456,34 +1988,41 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-19T18:00:00-04:00",
     "venue": "ยิลเล็ตต์ สเตเดียม (Boston)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 2,
+        "team": "โมร็อกโก",
+        "player": "Asmaail Saibari"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        57,
+        43
       ],
       "shots": [
-        0,
-        0
+        8,
+        8
       ],
       "shotsOnTarget": [
-        0,
-        0
+        3,
+        3
       ],
       "fouls": [
-        0,
-        0
+        9,
+        14
       ],
       "corners": [
-        0,
-        0
+        6,
+        5
       ],
       "offsides": [
-        0,
-        0
+        3,
+        3
       ],
       "yellowCards": [
-        0,
+        1,
         0
       ],
       "redCards": [
@@ -1503,34 +2042,47 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-19T12:00:00-07:00",
     "venue": "สนามกีฬาลูเมนฟิลด์ (Seattle)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 11,
+        "team": "สหรัฐอเมริกา",
+        "player": "Kamrvn Bargs"
+      },
+      {
+        "type": "GOAL",
+        "minute": 43,
+        "team": "สหรัฐอเมริกา",
+        "player": "Alex Freeman"
+      }
+    ],
     "stats": {
       "possession": [
         50,
         50
       ],
       "shots": [
-        0,
-        0
+        10,
+        6
       ],
       "shotsOnTarget": [
-        0,
-        0
+        3,
+        2
       ],
       "fouls": [
-        0,
-        0
+        14,
+        15
       ],
       "corners": [
-        0,
-        0
+        5,
+        7
       ],
       "offsides": [
-        0,
-        0
+        3,
+        1
       ],
       "yellowCards": [
-        0,
+        2,
         0
       ],
       "redCards": [
@@ -1550,34 +2102,41 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-19T20:00:00-07:00",
     "venue": "ลีวายส์ สเตเดียม (Santa Clara)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 2,
+        "team": "ปารากวัย",
+        "player": "Matías Galarza"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        40,
+        60
       ],
       "shots": [
-        0,
-        0
+        14,
+        11
       ],
       "shotsOnTarget": [
-        0,
-        0
+        5,
+        4
       ],
       "fouls": [
-        0,
-        0
+        12,
+        13
       ],
       "corners": [
-        0,
-        0
+        3,
+        6
       ],
       "offsides": [
         0,
-        0
+        1
       ],
       "yellowCards": [
-        0,
+        2,
         0
       ],
       "redCards": [
@@ -1597,35 +2156,54 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-20T16:00:00-04:00",
     "venue": "สนามกีฬาโตรอนโต (BMO Field)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 30,
+        "team": "ไอวอรีโคสต์",
+        "player": "Franck Kessié"
+      },
+      {
+        "type": "GOAL",
+        "minute": 68,
+        "team": "เยอรมนี",
+        "player": "Dniz Avndav"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "เยอรมนี",
+        "player": "Dniz Avndav"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        59,
+        41
       ],
       "shots": [
-        0,
-        0
+        8,
+        7
       ],
       "shotsOnTarget": [
-        0,
-        0
+        3,
+        3
       ],
       "fouls": [
-        0,
-        0
+        13,
+        11
       ],
       "corners": [
-        0,
-        0
+        3,
+        5
       ],
       "offsides": [
-        0,
-        0
+        1,
+        3
       ],
       "yellowCards": [
         0,
-        0
+        1
       ],
       "redCards": [
         0,
@@ -1647,32 +2225,32 @@ let INITIAL_MATCHES = [
     "events": [],
     "stats": {
       "possession": [
-        50,
-        50
+        43,
+        57
       ],
       "shots": [
-        0,
-        0
+        11,
+        9
       ],
       "shotsOnTarget": [
-        0,
-        0
+        6,
+        4
       ],
       "fouls": [
-        0,
-        0
+        13,
+        14
       ],
       "corners": [
-        0,
-        0
+        6,
+        3
       ],
       "offsides": [
-        0,
+        3,
         0
       ],
       "yellowCards": [
-        0,
-        0
+        2,
+        1
       ],
       "redCards": [
         0,
@@ -1691,34 +2269,71 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-20T12:00:00-05:00",
     "venue": "เอ็นอาร์จี สเตเดียม (Houston)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 5,
+        "team": "เนเธอร์แลนด์",
+        "player": "Brian Brobbey"
+      },
+      {
+        "type": "GOAL",
+        "minute": 17,
+        "team": "เนเธอร์แลนด์",
+        "player": "Brian Brobbey"
+      },
+      {
+        "type": "GOAL",
+        "minute": 47,
+        "team": "เนเธอร์แลนด์",
+        "player": "Kvdi Khakpv"
+      },
+      {
+        "type": "GOAL",
+        "minute": 54,
+        "team": "เนเธอร์แลนด์",
+        "player": "Kvdi Khakpv"
+      },
+      {
+        "type": "GOAL",
+        "minute": 59,
+        "team": "สวีเดน",
+        "player": "Anthony Elanga"
+      },
+      {
+        "type": "GOAL",
+        "minute": 89,
+        "team": "เนเธอร์แลนด์",
+        "player": "Crysencio Summerville"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        55,
+        45
       ],
       "shots": [
-        0,
-        0
+        14,
+        7
       ],
       "shotsOnTarget": [
-        0,
-        0
+        6,
+        2
       ],
       "fouls": [
-        0,
-        0
+        14,
+        8
       ],
       "corners": [
-        0,
-        0
+        2,
+        7
       ],
       "offsides": [
-        0,
-        0
+        3,
+        3
       ],
       "yellowCards": [
-        0,
+        1,
         0
       ],
       "redCards": [
@@ -1738,27 +2353,52 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-20T22:00:00-05:00",
     "venue": "สนามกีฬาบีบีวีเอ (Estadio Monterrey)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 4,
+        "team": "ญี่ปุ่น",
+        "player": "Daichi Kamada"
+      },
+      {
+        "type": "GOAL",
+        "minute": 31,
+        "team": "ญี่ปุ่น",
+        "player": "Aiash Ivida"
+      },
+      {
+        "type": "GOAL",
+        "minute": 69,
+        "team": "ญี่ปุ่น",
+        "player": "Junya Itō"
+      },
+      {
+        "type": "GOAL",
+        "minute": 83,
+        "team": "ญี่ปุ่น",
+        "player": "Aiash Ivida"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        53,
+        47
       ],
       "shots": [
-        0,
-        0
+        11,
+        7
       ],
       "shotsOnTarget": [
-        0,
-        0
+        3,
+        4
       ],
       "fouls": [
-        0,
-        0
+        8,
+        9
       ],
       "corners": [
-        0,
-        0
+        5,
+        2
       ],
       "offsides": [
         0,
@@ -1766,7 +2406,7 @@ let INITIAL_MATCHES = [
       ],
       "yellowCards": [
         0,
-        0
+        2
       ],
       "redCards": [
         0,
@@ -1788,32 +2428,32 @@ let INITIAL_MATCHES = [
     "events": [],
     "stats": {
       "possession": [
-        50,
-        50
+        48,
+        52
       ],
       "shots": [
-        0,
-        0
+        11,
+        8
       ],
       "shotsOnTarget": [
-        0,
-        0
+        3,
+        4
       ],
       "fouls": [
-        0,
-        0
+        8,
+        12
       ],
       "corners": [
-        0,
-        0
+        4,
+        5
       ],
       "offsides": [
         0,
-        0
+        3
       ],
       "yellowCards": [
         0,
-        0
+        2
       ],
       "redCards": [
         0,
@@ -1832,34 +2472,59 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-21T18:00:00-07:00",
     "venue": "บีซี เพลส (Vancouver)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 15,
+        "team": "นิวซีแลนด์",
+        "player": "Fin Svrman"
+      },
+      {
+        "type": "GOAL",
+        "minute": 58,
+        "team": "อียิปต์",
+        "player": "Mostafa Ziko"
+      },
+      {
+        "type": "GOAL",
+        "minute": 67,
+        "team": "อียิปต์",
+        "player": "Mohamed Salah"
+      },
+      {
+        "type": "GOAL",
+        "minute": 82,
+        "team": "อียิปต์",
+        "player": "Mahmoud Hassan Trezeguet"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        60,
+        40
       ],
       "shots": [
-        0,
-        0
+        5,
+        13
       ],
       "shotsOnTarget": [
-        0,
-        0
+        1,
+        7
       ],
       "fouls": [
-        0,
-        0
+        9,
+        9
       ],
       "corners": [
-        0,
-        0
+        7,
+        3
       ],
       "offsides": [
         0,
-        0
+        3
       ],
       "yellowCards": [
-        0,
+        2,
         0
       ],
       "redCards": [
@@ -1879,35 +2544,60 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-21T12:00:00-04:00",
     "venue": "เมอร์เซเดส-เบนซ์ สเตเดียม (Atlanta)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 10,
+        "team": "สเปน",
+        "player": "Lamine Yamal"
+      },
+      {
+        "type": "GOAL",
+        "minute": 21,
+        "team": "สเปน",
+        "player": "Mikel Oyarzabal"
+      },
+      {
+        "type": "GOAL",
+        "minute": 24,
+        "team": "สเปน",
+        "player": "Mikel Oyarzabal"
+      },
+      {
+        "type": "GOAL",
+        "minute": 49,
+        "team": "สเปน",
+        "player": "Hassan Mohamed Altmbkti"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        46,
+        54
       ],
       "shots": [
-        0,
-        0
+        7,
+        7
       ],
       "shotsOnTarget": [
-        0,
-        0
+        4,
+        4
       ],
       "fouls": [
-        0,
-        0
+        15,
+        10
       ],
       "corners": [
-        0,
-        0
+        3,
+        2
       ],
       "offsides": [
-        0,
-        0
+        2,
+        1
       ],
       "yellowCards": [
-        0,
-        0
+        2,
+        2
       ],
       "redCards": [
         0,
@@ -1926,35 +2616,60 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-21T18:00:00-04:00",
     "venue": "สนามกีฬาฮาร์ดร็อค (Miami)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 21,
+        "team": "เคปเวิร์ด",
+        "player": "Kevin Pina"
+      },
+      {
+        "type": "GOAL",
+        "minute": 44,
+        "team": "อุรุกวัย",
+        "player": "Maximiliano Araújo"
+      },
+      {
+        "type": "GOAL",
+        "minute": 45,
+        "team": "อุรุกวัย",
+        "player": "Agustín Canobbio"
+      },
+      {
+        "type": "GOAL",
+        "minute": 61,
+        "team": "เคปเวิร์ด",
+        "player": "Hliv Varla"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        44,
+        56
       ],
       "shots": [
-        0,
-        0
+        12,
+        6
       ],
       "shotsOnTarget": [
-        0,
-        0
+        4,
+        3
       ],
       "fouls": [
-        0,
-        0
+        14,
+        12
       ],
       "corners": [
-        0,
-        0
+        7,
+        5
       ],
       "offsides": [
-        0,
+        3,
         0
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        1
       ],
       "redCards": [
         0,
@@ -1973,34 +2688,53 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-22T17:00:00-04:00",
     "venue": "ลินคอล์น ไฟแนนเชียล ฟิลด์ (Philadelphia)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 14,
+        "team": "ฝรั่งเศส",
+        "player": "Kylian Mbappé"
+      },
+      {
+        "type": "GOAL",
+        "minute": 54,
+        "team": "ฝรั่งเศส",
+        "player": "Kylian Mbappé"
+      },
+      {
+        "type": "GOAL",
+        "minute": 66,
+        "team": "ฝรั่งเศส",
+        "player": "Ousmane Dembélé"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        45,
+        55
       ],
       "shots": [
-        0,
-        0
+        9,
+        6
       ],
       "shotsOnTarget": [
-        0,
-        0
+        5,
+        3
       ],
       "fouls": [
-        0,
-        0
+        13,
+        14
       ],
       "corners": [
-        0,
-        0
+        5,
+        7
       ],
       "offsides": [
-        0,
-        0
+        1,
+        1
       ],
       "yellowCards": [
-        0,
+        2,
         0
       ],
       "redCards": [
@@ -2020,35 +2754,66 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-22T20:00:00-04:00",
     "venue": "เม็ทไลฟ์ สเตเดียม (East Rutherford)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 43,
+        "team": "นอร์เวย์",
+        "player": "Markvs Hlmgrn Pdrsn"
+      },
+      {
+        "type": "GOAL",
+        "minute": 48,
+        "team": "นอร์เวย์",
+        "player": "Erling Haaland"
+      },
+      {
+        "type": "GOAL",
+        "minute": 53,
+        "team": "เซเนกัล",
+        "player": "Ismaïla Sarr"
+      },
+      {
+        "type": "GOAL",
+        "minute": 58,
+        "team": "นอร์เวย์",
+        "player": "Erling Haaland"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "เซเนกัล",
+        "player": "Ismaïla Sarr"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        45,
+        55
       ],
       "shots": [
-        0,
-        0
+        7,
+        6
       ],
       "shotsOnTarget": [
-        0,
-        0
+        3,
+        3
       ],
       "fouls": [
-        0,
-        0
+        13,
+        8
       ],
       "corners": [
-        0,
-        0
+        3,
+        7
       ],
       "offsides": [
         0,
-        0
+        2
       ],
       "yellowCards": [
         0,
-        0
+        1
       ],
       "redCards": [
         0,
@@ -2067,35 +2832,48 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-22T12:00:00-05:00",
     "venue": "เอทีแอนด์ที สเตเดียม (Arlington)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 38,
+        "team": "อาร์เจนตินา",
+        "player": "Lionel Messi"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "อาร์เจนตินา",
+        "player": "Lionel Messi"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        40,
+        60
       ],
       "shots": [
-        0,
-        0
+        11,
+        10
       ],
       "shotsOnTarget": [
-        0,
-        0
+        6,
+        5
       ],
       "fouls": [
-        0,
-        0
+        8,
+        12
       ],
       "corners": [
-        0,
-        0
+        3,
+        7
       ],
       "offsides": [
-        0,
-        0
+        1,
+        1
       ],
       "yellowCards": [
-        0,
-        0
+        2,
+        2
       ],
       "redCards": [
         0,
@@ -2114,35 +2892,54 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-22T20:00:00-07:00",
     "venue": "ลีวายส์ สเตเดียม (Santa Clara)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 36,
+        "team": "จอร์แดน",
+        "player": "Al Rashdan"
+      },
+      {
+        "type": "GOAL",
+        "minute": 69,
+        "team": "แอลจีเรีย",
+        "player": "Nzir Bnbvali"
+      },
+      {
+        "type": "GOAL",
+        "minute": 82,
+        "team": "แอลจีเรีย",
+        "player": "Amine Gouiri"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        52,
+        48
       ],
       "shots": [
-        0,
-        0
+        9,
+        11
       ],
       "shotsOnTarget": [
-        0,
-        0
+        5,
+        5
       ],
       "fouls": [
-        0,
-        0
+        12,
+        12
       ],
       "corners": [
-        0,
-        0
+        2,
+        7
       ],
       "offsides": [
-        0,
+        1,
         0
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        2
       ],
       "redCards": [
         0,
@@ -2161,35 +2958,66 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-23T12:00:00-05:00",
     "venue": "เอ็นอาร์จี สเตเดียม (Houston)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 6,
+        "team": "โปรตุเกส",
+        "player": "Cristiano Ronaldo"
+      },
+      {
+        "type": "GOAL",
+        "minute": 17,
+        "team": "โปรตุเกส",
+        "player": "Nvnv Mndz"
+      },
+      {
+        "type": "GOAL",
+        "minute": 39,
+        "team": "โปรตุเกส",
+        "player": "Cristiano Ronaldo"
+      },
+      {
+        "type": "GOAL",
+        "minute": 60,
+        "team": "โปรตุเกส",
+        "player": "Abdalvhid Namtvf"
+      },
+      {
+        "type": "GOAL",
+        "minute": 87,
+        "team": "โปรตุเกส",
+        "player": "Rafael Leão"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        40,
+        60
       ],
       "shots": [
-        0,
-        0
+        12,
+        6
       ],
       "shotsOnTarget": [
-        0,
-        0
+        6,
+        2
       ],
       "fouls": [
-        0,
-        0
+        9,
+        10
       ],
       "corners": [
-        0,
-        0
+        3,
+        6
       ],
       "offsides": [
-        0,
-        0
+        1,
+        3
       ],
       "yellowCards": [
         0,
-        0
+        2
       ],
       "redCards": [
         0,
@@ -2208,35 +3036,42 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-23T19:00:00-04:00",
     "venue": "สนามกีฬาโตรอนโต (BMO Field)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 54,
+        "team": "โครเอเชีย",
+        "player": "Ante Budimir"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        45,
+        55
       ],
       "shots": [
-        0,
-        0
+        14,
+        12
       ],
       "shotsOnTarget": [
-        0,
-        0
+        5,
+        5
       ],
       "fouls": [
-        0,
-        0
+        15,
+        14
       ],
       "corners": [
-        0,
-        0
+        7,
+        7
       ],
       "offsides": [
         0,
-        0
+        2
       ],
       "yellowCards": [
-        0,
-        0
+        2,
+        2
       ],
       "redCards": [
         0,
@@ -2255,35 +3090,42 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-23T20:00:00-05:00",
     "venue": "สนามกีฬากัวดาลาฮารา (Estadio Akron)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 76,
+        "team": "โคลอมเบีย",
+        "player": "Dnil Mvnvz"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        53,
+        47
       ],
       "shots": [
-        0,
-        0
+        14,
+        13
       ],
       "shotsOnTarget": [
-        0,
-        0
+        6,
+        4
       ],
       "fouls": [
-        0,
-        0
+        10,
+        12
       ],
       "corners": [
-        0,
-        0
+        2,
+        5
       ],
       "offsides": [
-        0,
-        0
+        2,
+        3
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        1
       ],
       "redCards": [
         0,
@@ -2305,32 +3147,32 @@ let INITIAL_MATCHES = [
     "events": [],
     "stats": {
       "possession": [
-        50,
-        50
+        44,
+        56
       ],
       "shots": [
-        0,
-        0
+        13,
+        13
       ],
       "shotsOnTarget": [
-        0,
-        0
+        6,
+        6
       ],
       "fouls": [
-        0,
-        0
+        8,
+        10
       ],
       "corners": [
-        0,
-        0
+        3,
+        7
       ],
       "offsides": [
         0,
-        0
+        1
       ],
       "yellowCards": [
         0,
-        0
+        2
       ],
       "redCards": [
         0,
@@ -2349,27 +3191,46 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-24T18:00:00-04:00",
     "venue": "สนามกีฬาฮาร์ดร็อค (Miami)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 7,
+        "team": "บราซิล",
+        "player": "Vinícius Júnior"
+      },
+      {
+        "type": "GOAL",
+        "minute": 45,
+        "team": "บราซิล",
+        "player": "Vinícius Júnior"
+      },
+      {
+        "type": "GOAL",
+        "minute": 60,
+        "team": "บราซิล",
+        "player": "Matheus Cunha"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        57,
+        43
       ],
       "shots": [
-        0,
-        0
+        12,
+        6
       ],
       "shotsOnTarget": [
-        0,
-        0
+        5,
+        3
       ],
       "fouls": [
-        0,
-        0
+        15,
+        15
       ],
       "corners": [
-        0,
-        0
+        6,
+        7
       ],
       "offsides": [
         0,
@@ -2377,7 +3238,7 @@ let INITIAL_MATCHES = [
       ],
       "yellowCards": [
         0,
-        0
+        2
       ],
       "redCards": [
         0,
@@ -2396,35 +3257,72 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-24T18:00:00-04:00",
     "venue": "เมอร์เซเดส-เบนซ์ สเตเดียม (Atlanta)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 10,
+        "team": "ไฮติ",
+        "player": "Yassine Bounou"
+      },
+      {
+        "type": "GOAL",
+        "minute": 39,
+        "team": "โมร็อกโก",
+        "player": "Achraf Hakimi"
+      },
+      {
+        "type": "GOAL",
+        "minute": 43,
+        "team": "ไฮติ",
+        "player": "Wilson Isidor"
+      },
+      {
+        "type": "GOAL",
+        "minute": 45,
+        "team": "โมร็อกโก",
+        "player": "Asmaail Saibari"
+      },
+      {
+        "type": "GOAL",
+        "minute": 78,
+        "team": "โมร็อกโก",
+        "player": "Svfian Rhimi"
+      },
+      {
+        "type": "GOAL",
+        "minute": 89,
+        "team": "โมร็อกโก",
+        "player": "Gessime Yassine"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        49,
+        51
       ],
       "shots": [
-        0,
-        0
+        7,
+        14
       ],
       "shotsOnTarget": [
-        0,
-        0
+        4,
+        7
       ],
       "fouls": [
-        0,
-        0
+        15,
+        12
       ],
       "corners": [
-        0,
-        0
+        2,
+        3
       ],
       "offsides": [
-        0,
-        0
+        1,
+        1
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        2
       ],
       "redCards": [
         0,
@@ -2443,34 +3341,41 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-24T19:00:00-05:00",
     "venue": "สนามกีฬาบีบีวีเอ (Estadio Monterrey)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 63,
+        "team": "แอฟริกาใต้",
+        "player": "Taplv Maskv"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        57,
+        43
       ],
       "shots": [
-        0,
-        0
+        8,
+        9
       ],
       "shotsOnTarget": [
-        0,
-        0
+        4,
+        3
       ],
       "fouls": [
-        0,
-        0
+        15,
+        8
       ],
       "corners": [
-        0,
-        0
+        5,
+        5
       ],
       "offsides": [
-        0,
-        0
+        3,
+        2
       ],
       "yellowCards": [
-        0,
+        2,
         0
       ],
       "redCards": [
@@ -2490,34 +3395,53 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-24T19:00:00-05:00",
     "venue": "สนามกีฬากลางเม็กซิโกซิตี้ (Estadio Azteca)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 55,
+        "team": "เม็กซิโก",
+        "player": "Mateo Chávez"
+      },
+      {
+        "type": "GOAL",
+        "minute": 61,
+        "team": "เม็กซิโก",
+        "player": "Jvlian Kviinvnz"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "เม็กซิโก",
+        "player": "Álvaro Fidalgo"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        45,
+        55
       ],
       "shots": [
-        0,
-        0
+        14,
+        7
       ],
       "shotsOnTarget": [
-        0,
-        0
+        5,
+        3
       ],
       "fouls": [
-        0,
-        0
+        8,
+        14
       ],
       "corners": [
-        0,
-        0
+        5,
+        6
       ],
       "offsides": [
-        0,
-        0
+        2,
+        2
       ],
       "yellowCards": [
-        0,
+        2,
         0
       ],
       "redCards": [
@@ -2537,35 +3461,60 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-24T12:00:00-07:00",
     "venue": "สนามกีฬาลูเมนฟิลด์ (Seattle)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 29,
+        "team": "บอสเนียและเฮอร์เซโกวีนา",
+        "player": "Karim Alaibgvvich"
+      },
+      {
+        "type": "GOAL",
+        "minute": 34,
+        "team": "บอสเนียและเฮอร์เซโกวีนา",
+        "player": "Abvnad"
+      },
+      {
+        "type": "GOAL",
+        "minute": 42,
+        "team": "กาตาร์",
+        "player": "Hassan Al-Haydos"
+      },
+      {
+        "type": "GOAL",
+        "minute": 80,
+        "team": "บอสเนียและเฮอร์เซโกวีนา",
+        "player": "Armin Mhmich"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        40,
+        60
       ],
       "shots": [
-        0,
-        0
+        8,
+        9
       ],
       "shotsOnTarget": [
-        0,
-        0
+        4,
+        4
       ],
       "fouls": [
-        0,
-        0
+        9,
+        8
       ],
       "corners": [
-        0,
-        0
+        4,
+        7
       ],
       "offsides": [
-        0,
-        0
+        2,
+        2
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        2
       ],
       "redCards": [
         0,
@@ -2584,35 +3533,54 @@ let INITIAL_MATCHES = [
     "minute": 90,
     "date": "2026-06-24T12:00:00-07:00",
     "venue": "บีซี เพลส (Vancouver)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 46,
+        "team": "สวิตเซอร์แลนด์",
+        "player": "Rubén Vargas"
+      },
+      {
+        "type": "GOAL",
+        "minute": 57,
+        "team": "สวิตเซอร์แลนด์",
+        "player": "Jvhan Mnzambi"
+      },
+      {
+        "type": "GOAL",
+        "minute": 76,
+        "team": "แคนาดา",
+        "player": "Prvmis Divid"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        53,
+        47
       ],
       "shots": [
-        0,
-        0
+        6,
+        5
       ],
       "shotsOnTarget": [
-        0,
-        0
+        2,
+        2
       ],
       "fouls": [
-        0,
-        0
+        10,
+        14
       ],
       "corners": [
-        0,
-        0
+        6,
+        5
       ],
       "offsides": [
-        0,
-        0
+        3,
+        1
       ],
       "yellowCards": [
-        0,
-        0
+        2,
+        2
       ],
       "redCards": [
         0,
@@ -2626,40 +3594,53 @@ let INITIAL_MATCHES = [
     "team1": "กูราเซา",
     "team2": "ไอวอรีโคสต์",
     "score1": 0,
-    "score2": 0,
-    "status": "SCHEDULED",
-    "minute": 0,
+    "score2": 2,
+    "status": "FINISHED",
+    "minute": 90,
     "date": "2026-06-25T16:00:00-04:00",
     "venue": "ลินคอล์น ไฟแนนเชียล ฟิลด์ (Philadelphia)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 7,
+        "team": "ไอวอรีโคสต์",
+        "player": "Nikvlas Ph Ph"
+      },
+      {
+        "type": "GOAL",
+        "minute": 64,
+        "team": "ไอวอรีโคสต์",
+        "player": "Nikvlas Ph Ph"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        43,
+        57
       ],
       "shots": [
-        0,
-        0
+        12,
+        12
       ],
       "shotsOnTarget": [
-        0,
-        0
+        7,
+        4
       ],
       "fouls": [
-        0,
-        0
+        13,
+        9
       ],
       "corners": [
-        0,
-        0
+        7,
+        2
       ],
       "offsides": [
-        0,
-        0
+        1,
+        1
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        2
       ],
       "redCards": [
         0,
@@ -2672,41 +3653,60 @@ let INITIAL_MATCHES = [
     "group": "E",
     "team1": "เอกวาดอร์",
     "team2": "เยอรมนี",
-    "score1": 0,
-    "score2": 0,
-    "status": "SCHEDULED",
-    "minute": 0,
+    "score1": 2,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
     "date": "2026-06-25T16:00:00-04:00",
     "venue": "เม็ทไลฟ์ สเตเดียม (East Rutherford)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 2,
+        "team": "เยอรมนี",
+        "player": "Leroy Sané"
+      },
+      {
+        "type": "GOAL",
+        "minute": 9,
+        "team": "เอกวาดอร์",
+        "player": "Nilsvn Angvlv"
+      },
+      {
+        "type": "GOAL",
+        "minute": 77,
+        "team": "เอกวาดอร์",
+        "player": "Gvnzalv Plata"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        56,
+        44
       ],
       "shots": [
-        0,
-        0
+        8,
+        5
       ],
       "shotsOnTarget": [
-        0,
-        0
+        3,
+        2
       ],
       "fouls": [
-        0,
-        0
+        8,
+        12
       ],
       "corners": [
-        0,
-        0
+        5,
+        4
       ],
       "offsides": [
         0,
-        0
+        3
       ],
       "yellowCards": [
-        0,
-        0
+        2,
+        2
       ],
       "redCards": [
         0,
@@ -2721,35 +3721,35 @@ let INITIAL_MATCHES = [
     "team2": "ออสเตรเลีย",
     "score1": 0,
     "score2": 0,
-    "status": "SCHEDULED",
-    "minute": 0,
+    "status": "FINISHED",
+    "minute": 90,
     "date": "2026-06-25T19:00:00-07:00",
     "venue": "ลีวายส์ สเตเดียม (Santa Clara)",
     "events": [],
     "stats": {
       "possession": [
-        50,
-        50
+        58,
+        42
       ],
       "shots": [
-        0,
-        0
+        9,
+        10
       ],
       "shotsOnTarget": [
-        0,
-        0
+        3,
+        4
       ],
       "fouls": [
-        0,
-        0
+        9,
+        8
       ],
       "corners": [
-        0,
-        0
+        2,
+        4
       ],
       "offsides": [
-        0,
-        0
+        3,
+        2
       ],
       "yellowCards": [
         0,
@@ -2766,40 +3766,71 @@ let INITIAL_MATCHES = [
     "group": "D",
     "team1": "ตุรกี",
     "team2": "สหรัฐอเมริกา",
-    "score1": 0,
-    "score2": 0,
-    "status": "SCHEDULED",
-    "minute": 0,
+    "score1": 3,
+    "score2": 2,
+    "status": "FINISHED",
+    "minute": 90,
     "date": "2026-06-25T19:00:00-07:00",
     "venue": "โลสแอนเจลิส สเตเดียม (SoFi Stadium)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 3,
+        "team": "สหรัฐอเมริกา",
+        "player": "Auston Trusty"
+      },
+      {
+        "type": "GOAL",
+        "minute": 10,
+        "team": "ตุรกี",
+        "player": "Arda Güler"
+      },
+      {
+        "type": "GOAL",
+        "minute": 31,
+        "team": "ตุรกี",
+        "player": "Baris Alpr Ailmaz"
+      },
+      {
+        "type": "GOAL",
+        "minute": 49,
+        "team": "สหรัฐอเมริกา",
+        "player": "Sebastian Berhalter"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "ตุรกี",
+        "player": "Kan Aihan"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        56,
+        44
       ],
       "shots": [
-        0,
-        0
+        5,
+        6
       ],
       "shotsOnTarget": [
-        0,
-        0
+        3,
+        2
       ],
       "fouls": [
-        0,
-        0
+        12,
+        10
       ],
       "corners": [
-        0,
-        0
+        6,
+        7
       ],
       "offsides": [
-        0,
-        0
+        2,
+        3
       ],
       "yellowCards": [
-        0,
+        2,
         0
       ],
       "redCards": [
@@ -2813,40 +3844,53 @@ let INITIAL_MATCHES = [
     "group": "F",
     "team1": "ญี่ปุ่น",
     "team2": "สวีเดน",
-    "score1": 0,
-    "score2": 0,
-    "status": "SCHEDULED",
-    "minute": 0,
+    "score1": 1,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
     "date": "2026-06-25T18:00:00-05:00",
     "venue": "เอทีแอนด์ที สเตเดียม (Arlington)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 56,
+        "team": "ญี่ปุ่น",
+        "player": "Daizen Maeda"
+      },
+      {
+        "type": "GOAL",
+        "minute": 62,
+        "team": "สวีเดน",
+        "player": "Anthony Elanga"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        58,
+        42
       ],
       "shots": [
-        0,
-        0
+        8,
+        8
       ],
       "shotsOnTarget": [
-        0,
-        0
+        4,
+        2
       ],
       "fouls": [
-        0,
-        0
+        13,
+        8
       ],
       "corners": [
-        0,
-        0
+        6,
+        2
       ],
       "offsides": [
-        0,
+        3,
         0
       ],
       "yellowCards": [
-        0,
+        2,
         0
       ],
       "redCards": [
@@ -2860,41 +3904,66 @@ let INITIAL_MATCHES = [
     "group": "F",
     "team1": "ตูนิเซีย",
     "team2": "เนเธอร์แลนด์",
-    "score1": 0,
-    "score2": 0,
-    "status": "SCHEDULED",
-    "minute": 0,
+    "score1": 1,
+    "score2": 3,
+    "status": "FINISHED",
+    "minute": 90,
     "date": "2026-06-25T18:00:00-05:00",
     "venue": "สนามกีฬาลูกศร (Arrowhead Stadium)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 3,
+        "team": "เนเธอร์แลนด์",
+        "player": "Alis Skhiri"
+      },
+      {
+        "type": "GOAL",
+        "minute": 7,
+        "team": "เนเธอร์แลนด์",
+        "player": "Brian Brobbey"
+      },
+      {
+        "type": "GOAL",
+        "minute": 54,
+        "team": "ตูนิเซีย",
+        "player": "Hazm Mstvri"
+      },
+      {
+        "type": "GOAL",
+        "minute": 62,
+        "team": "เนเธอร์แลนด์",
+        "player": "Ian Fn Hkh"
+      }
+    ],
     "stats": {
       "possession": [
         50,
         50
       ],
       "shots": [
-        0,
-        0
+        10,
+        7
       ],
       "shotsOnTarget": [
-        0,
-        0
+        4,
+        3
       ],
       "fouls": [
-        0,
-        0
+        14,
+        10
       ],
       "corners": [
-        0,
-        0
+        2,
+        3
       ],
       "offsides": [
         0,
-        0
+        1
       ],
       "yellowCards": [
         0,
-        0
+        1
       ],
       "redCards": [
         0,
@@ -2907,41 +3976,72 @@ let INITIAL_MATCHES = [
     "group": "I",
     "team1": "เซเนกัล",
     "team2": "อิรัก",
-    "score1": 0,
+    "score1": 5,
     "score2": 0,
-    "status": "SCHEDULED",
-    "minute": 0,
+    "status": "FINISHED",
+    "minute": 90,
     "date": "2026-06-26T15:00:00-04:00",
     "venue": "สนามกีฬาโตรอนโต (BMO Field)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 4,
+        "team": "เซเนกัล",
+        "player": "Habib Diarra"
+      },
+      {
+        "type": "GOAL",
+        "minute": 56,
+        "team": "เซเนกัล",
+        "player": "Ismaïla Sarr"
+      },
+      {
+        "type": "GOAL",
+        "minute": 59,
+        "team": "เซเนกัล",
+        "player": "Paph Gviih"
+      },
+      {
+        "type": "GOAL",
+        "minute": 71,
+        "team": "เซเนกัล",
+        "player": "Paph Gviih"
+      },
+      {
+        "type": "GOAL",
+        "minute": 82,
+        "team": "เซเนกัล",
+        "player": "Ailman Andiaih"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        46,
+        54
       ],
       "shots": [
-        0,
-        0
+        8,
+        9
       ],
       "shotsOnTarget": [
-        0,
-        0
+        5,
+        4
       ],
       "fouls": [
-        0,
-        0
+        11,
+        12
       ],
       "corners": [
-        0,
-        0
+        5,
+        3
       ],
       "offsides": [
-        0,
-        0
+        3,
+        3
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        2
       ],
       "redCards": [
         0,
@@ -2954,41 +4054,72 @@ let INITIAL_MATCHES = [
     "group": "I",
     "team1": "นอร์เวย์",
     "team2": "ฝรั่งเศส",
-    "score1": 0,
-    "score2": 0,
-    "status": "SCHEDULED",
-    "minute": 0,
+    "score1": 1,
+    "score2": 4,
+    "status": "FINISHED",
+    "minute": 90,
     "date": "2026-06-26T15:00:00-04:00",
     "venue": "ยิลเล็ตต์ สเตเดียม (Boston)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 7,
+        "team": "ฝรั่งเศส",
+        "player": "Ousmane Dembélé"
+      },
+      {
+        "type": "GOAL",
+        "minute": 20,
+        "team": "ฝรั่งเศส",
+        "player": "Ousmane Dembélé"
+      },
+      {
+        "type": "GOAL",
+        "minute": 21,
+        "team": "นอร์เวย์",
+        "player": "Thelo Aasgaard"
+      },
+      {
+        "type": "GOAL",
+        "minute": 32,
+        "team": "ฝรั่งเศส",
+        "player": "Ousmane Dembélé"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "ฝรั่งเศส",
+        "player": "Désiré Doué"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        51,
+        49
       ],
       "shots": [
-        0,
-        0
+        14,
+        14
       ],
       "shotsOnTarget": [
-        0,
-        0
+        4,
+        5
       ],
       "fouls": [
-        0,
-        0
+        9,
+        14
       ],
       "corners": [
-        0,
-        0
+        3,
+        7
       ],
       "offsides": [
-        0,
+        3,
         0
       ],
       "yellowCards": [
-        0,
-        0
+        2,
+        2
       ],
       "redCards": [
         0,
@@ -3001,41 +4132,54 @@ let INITIAL_MATCHES = [
     "group": "G",
     "team1": "อียิปต์",
     "team2": "อิหร่าน",
-    "score1": 0,
-    "score2": 0,
-    "status": "SCHEDULED",
-    "minute": 0,
+    "score1": 1,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
     "date": "2026-06-26T20:00:00-07:00",
     "venue": "สนามกีฬาลูเมนฟิลด์ (Seattle)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 5,
+        "team": "อียิปต์",
+        "player": "Mahmoud Saber"
+      },
+      {
+        "type": "GOAL",
+        "minute": 14,
+        "team": "อิหร่าน",
+        "player": "Ramin Rezaeian"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        43,
+        57
       ],
       "shots": [
-        0,
-        0
+        7,
+        8
       ],
       "shotsOnTarget": [
-        0,
-        0
+        3,
+        2
       ],
       "fouls": [
-        0,
-        0
+        10,
+        10
       ],
       "corners": [
-        0,
-        0
+        2,
+        7
       ],
       "offsides": [
-        0,
-        0
+        3,
+        1
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        1
       ],
       "redCards": [
         0,
@@ -3048,41 +4192,78 @@ let INITIAL_MATCHES = [
     "group": "G",
     "team1": "นิวซีแลนด์",
     "team2": "เบลเยียม",
-    "score1": 0,
-    "score2": 0,
-    "status": "SCHEDULED",
-    "minute": 0,
+    "score1": 1,
+    "score2": 5,
+    "status": "FINISHED",
+    "minute": 90,
     "date": "2026-06-26T20:00:00-07:00",
     "venue": "บีซี เพลส (Vancouver)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 28,
+        "team": "เบลเยียม",
+        "player": "Leandro Trossard"
+      },
+      {
+        "type": "GOAL",
+        "minute": 50,
+        "team": "เบลเยียม",
+        "player": "Leandro Trossard"
+      },
+      {
+        "type": "GOAL",
+        "minute": 66,
+        "team": "เบลเยียม",
+        "player": "Kevin De Bruyne"
+      },
+      {
+        "type": "GOAL",
+        "minute": 84,
+        "team": "นิวซีแลนด์",
+        "player": "Ali Jast"
+      },
+      {
+        "type": "GOAL",
+        "minute": 86,
+        "team": "เบลเยียม",
+        "player": "Romelu Lukaku"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "เบลเยียม",
+        "player": "Alexis Saelemaekers"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        57,
+        43
       ],
       "shots": [
-        0,
-        0
+        12,
+        7
       ],
       "shotsOnTarget": [
-        0,
-        0
+        4,
+        5
       ],
       "fouls": [
-        0,
-        0
+        8,
+        12
       ],
       "corners": [
-        0,
-        0
+        2,
+        6
       ],
       "offsides": [
         0,
-        0
+        1
       ],
       "yellowCards": [
         0,
-        0
+        1
       ],
       "redCards": [
         0,
@@ -3097,39 +4278,39 @@ let INITIAL_MATCHES = [
     "team2": "ซาอุดีอาระเบีย",
     "score1": 0,
     "score2": 0,
-    "status": "SCHEDULED",
-    "minute": 0,
+    "status": "FINISHED",
+    "minute": 90,
     "date": "2026-06-26T19:00:00-05:00",
     "venue": "เอ็นอาร์จี สเตเดียม (Houston)",
     "events": [],
     "stats": {
       "possession": [
-        50,
-        50
+        47,
+        53
       ],
       "shots": [
-        0,
-        0
+        7,
+        5
       ],
       "shotsOnTarget": [
-        0,
-        0
+        2,
+        1
       ],
       "fouls": [
-        0,
-        0
+        14,
+        9
       ],
       "corners": [
-        0,
-        0
+        4,
+        2
       ],
       "offsides": [
-        0,
+        2,
         0
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        2
       ],
       "redCards": [
         0,
@@ -3143,40 +4324,47 @@ let INITIAL_MATCHES = [
     "team1": "อุรุกวัย",
     "team2": "สเปน",
     "score1": 0,
-    "score2": 0,
-    "status": "SCHEDULED",
-    "minute": 0,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
     "date": "2026-06-26T18:00:00-05:00",
     "venue": "สนามกีฬากัวดาลาฮารา (Estadio Akron)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 42,
+        "team": "สเปน",
+        "player": "Álex Baena"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        51,
+        49
       ],
       "shots": [
-        0,
-        0
+        11,
+        8
       ],
       "shotsOnTarget": [
-        0,
-        0
+        4,
+        2
       ],
       "fouls": [
-        0,
-        0
+        8,
+        13
       ],
       "corners": [
-        0,
-        0
+        4,
+        3
       ],
       "offsides": [
-        0,
-        0
+        3,
+        2
       ],
       "yellowCards": [
         0,
-        0
+        1
       ],
       "redCards": [
         0,
@@ -3190,40 +4378,53 @@ let INITIAL_MATCHES = [
     "team1": "ปานามา",
     "team2": "อังกฤษ",
     "score1": 0,
-    "score2": 0,
-    "status": "SCHEDULED",
-    "minute": 0,
+    "score2": 2,
+    "status": "FINISHED",
+    "minute": 90,
     "date": "2026-06-27T17:00:00-04:00",
     "venue": "เม็ทไลฟ์ สเตเดียม (East Rutherford)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 62,
+        "team": "อังกฤษ",
+        "player": "Jvd Blingham"
+      },
+      {
+        "type": "GOAL",
+        "minute": 67,
+        "team": "อังกฤษ",
+        "player": "Hri Kin"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        51,
+        49
       ],
       "shots": [
-        0,
-        0
+        8,
+        6
       ],
       "shotsOnTarget": [
-        0,
-        0
+        2,
+        2
       ],
       "fouls": [
-        0,
-        0
+        10,
+        13
       ],
       "corners": [
-        0,
-        0
+        6,
+        4
       ],
       "offsides": [
-        0,
-        0
+        1,
+        1
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        2
       ],
       "redCards": [
         0,
@@ -3236,41 +4437,60 @@ let INITIAL_MATCHES = [
     "group": "L",
     "team1": "โครเอเชีย",
     "team2": "กานา",
-    "score1": 0,
-    "score2": 0,
-    "status": "SCHEDULED",
-    "minute": 0,
+    "score1": 2,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
     "date": "2026-06-27T17:00:00-04:00",
     "venue": "ลินคอล์น ไฟแนนเชียล ฟิลด์ (Philadelphia)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 31,
+        "team": "โครเอเชีย",
+        "player": "Petar Sučić"
+      },
+      {
+        "type": "GOAL",
+        "minute": 73,
+        "team": "กานา",
+        "player": "Drik Lvkasn"
+      },
+      {
+        "type": "GOAL",
+        "minute": 83,
+        "team": "โครเอเชีย",
+        "player": "Nikola Vlašić"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        45,
+        55
       ],
       "shots": [
-        0,
-        0
+        14,
+        10
       ],
       "shotsOnTarget": [
-        0,
-        0
+        6,
+        3
       ],
       "fouls": [
-        0,
-        0
+        8,
+        10
       ],
       "corners": [
-        0,
-        0
+        5,
+        4
       ],
       "offsides": [
-        0,
-        0
+        2,
+        1
       ],
       "yellowCards": [
-        0,
-        0
+        2,
+        2
       ],
       "redCards": [
         0,
@@ -3283,41 +4503,78 @@ let INITIAL_MATCHES = [
     "group": "J",
     "team1": "แอลจีเรีย",
     "team2": "ออสเตรีย",
-    "score1": 0,
-    "score2": 0,
-    "status": "SCHEDULED",
-    "minute": 0,
+    "score1": 3,
+    "score2": 3,
+    "status": "FINISHED",
+    "minute": 90,
     "date": "2026-06-27T21:00:00-05:00",
     "venue": "สนามกีฬาลูกศร (Arrowhead Stadium)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 28,
+        "team": "ออสเตรีย",
+        "player": "Marko Arnautović"
+      },
+      {
+        "type": "GOAL",
+        "minute": 45,
+        "team": "แอลจีเรีย",
+        "player": "Rafik Blghali"
+      },
+      {
+        "type": "GOAL",
+        "minute": 55,
+        "team": "ออสเตรีย",
+        "player": "Marcel Sabitzer"
+      },
+      {
+        "type": "GOAL",
+        "minute": 60,
+        "team": "แอลจีเรีย",
+        "player": "Riyad Mahrez"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "แอลจีเรีย",
+        "player": "Riyad Mahrez"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "ออสเตรีย",
+        "player": "Saša Kalajdžić"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        40,
+        60
       ],
       "shots": [
-        0,
-        0
+        6,
+        7
       ],
       "shotsOnTarget": [
-        0,
-        0
+        3,
+        3
       ],
       "fouls": [
-        0,
-        0
+        11,
+        10
       ],
       "corners": [
-        0,
-        0
+        7,
+        5
       ],
       "offsides": [
         0,
-        0
+        1
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        1
       ],
       "redCards": [
         0,
@@ -3330,41 +4587,66 @@ let INITIAL_MATCHES = [
     "group": "J",
     "team1": "จอร์แดน",
     "team2": "อาร์เจนตินา",
-    "score1": 0,
-    "score2": 0,
-    "status": "SCHEDULED",
-    "minute": 0,
+    "score1": 1,
+    "score2": 3,
+    "status": "FINISHED",
+    "minute": 90,
     "date": "2026-06-27T21:00:00-05:00",
     "venue": "เอทีแอนด์ที สเตเดียม (Arlington)",
-    "events": [],
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 19,
+        "team": "อาร์เจนตินา",
+        "player": "Jivani Lv Slsv"
+      },
+      {
+        "type": "PENALTY",
+        "minute": 31,
+        "team": "อาร์เจนตินา",
+        "player": "Lautaro Martínez"
+      },
+      {
+        "type": "GOAL",
+        "minute": 55,
+        "team": "จอร์แดน",
+        "player": "Mvsi Altmari"
+      },
+      {
+        "type": "GOAL",
+        "minute": 80,
+        "team": "อาร์เจนตินา",
+        "player": "Lionel Messi"
+      }
+    ],
     "stats": {
       "possession": [
-        50,
-        50
+        56,
+        44
       ],
       "shots": [
-        0,
-        0
+        7,
+        7
       ],
       "shotsOnTarget": [
-        0,
-        0
+        3,
+        3
       ],
       "fouls": [
-        0,
-        0
+        8,
+        13
       ],
       "corners": [
-        0,
-        0
+        5,
+        6
       ],
       "offsides": [
         0,
-        0
+        2
       ],
       "yellowCards": [
-        0,
-        0
+        1,
+        1
       ],
       "redCards": [
         0,
@@ -3379,10 +4661,546 @@ let INITIAL_MATCHES = [
     "team2": "โปรตุเกส",
     "score1": 0,
     "score2": 0,
-    "status": "SCHEDULED",
-    "minute": 0,
+    "status": "FINISHED",
+    "minute": 90,
     "date": "2026-06-27T19:30:00-04:00",
     "venue": "สนามกีฬาฮาร์ดร็อค (Miami)",
+    "events": [],
+    "stats": {
+      "possession": [
+        44,
+        56
+      ],
+      "shots": [
+        11,
+        5
+      ],
+      "shotsOnTarget": [
+        5,
+        1
+      ],
+      "fouls": [
+        15,
+        14
+      ],
+      "corners": [
+        6,
+        4
+      ],
+      "offsides": [
+        2,
+        1
+      ],
+      "yellowCards": [
+        1,
+        1
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 72,
+    "group": "K",
+    "team1": "ดีอาร์ คองโก",
+    "team2": "อุซเบกิสถาน",
+    "score1": 3,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-27T19:30:00-04:00",
+    "venue": "เมอร์เซเดส-เบนซ์ สเตเดียม (Atlanta)",
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 10,
+        "team": "อุซเบกิสถาน",
+        "player": "Aldvr Shvmvrvdvf"
+      },
+      {
+        "type": "GOAL",
+        "minute": 78,
+        "team": "ดีอาร์ คองโก",
+        "player": "Fistvn Mail"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "ดีอาร์ คองโก",
+        "player": "Yoane Wissa"
+      }
+    ],
+    "stats": {
+      "possession": [
+        42,
+        58
+      ],
+      "shots": [
+        8,
+        8
+      ],
+      "shotsOnTarget": [
+        4,
+        4
+      ],
+      "fouls": [
+        15,
+        9
+      ],
+      "corners": [
+        4,
+        4
+      ],
+      "offsides": [
+        3,
+        3
+      ],
+      "yellowCards": [
+        1,
+        2
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 73,
+    "group": "R32",
+    "team1": "แอฟริกาใต้",
+    "team2": "แคนาดา",
+    "score1": 0,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-28T05:00:00.000Z",
+    "venue": "Stadium ID 16",
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "แคนาดา",
+        "player": "Astfan Avstakviv"
+      }
+    ],
+    "stats": {
+      "possession": [
+        54,
+        46
+      ],
+      "shots": [
+        10,
+        8
+      ],
+      "shotsOnTarget": [
+        5,
+        3
+      ],
+      "fouls": [
+        9,
+        14
+      ],
+      "corners": [
+        4,
+        2
+      ],
+      "offsides": [
+        1,
+        3
+      ],
+      "yellowCards": [
+        2,
+        2
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 74,
+    "group": "R32",
+    "team1": "เยอรมนี",
+    "team2": "ปารากวัย",
+    "score1": 1,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-29T09:30:00.000Z",
+    "venue": "Stadium ID 9",
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 42,
+        "team": "ปารากวัย",
+        "player": "Khvliv Ansisv"
+      },
+      {
+        "type": "GOAL",
+        "minute": 54,
+        "team": "เยอรมนี",
+        "player": "Kai Havertz"
+      }
+    ],
+    "stats": {
+      "possession": [
+        55,
+        45
+      ],
+      "shots": [
+        11,
+        11
+      ],
+      "shotsOnTarget": [
+        5,
+        6
+      ],
+      "fouls": [
+        15,
+        13
+      ],
+      "corners": [
+        6,
+        5
+      ],
+      "offsides": [
+        0,
+        2
+      ],
+      "yellowCards": [
+        0,
+        2
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    },
+    "penalty1": 3,
+    "penalty2": 4
+  },
+  {
+    "id": 75,
+    "group": "R32",
+    "team1": "เนเธอร์แลนด์",
+    "team2": "โมร็อกโก",
+    "score1": 1,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-29T12:00:00.000Z",
+    "venue": "Stadium ID 3",
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 72,
+        "team": "เนเธอร์แลนด์",
+        "player": "Kvdi Khakpv"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "โมร็อกโก",
+        "player": "Issa Diop"
+      }
+    ],
+    "stats": {
+      "possession": [
+        51,
+        49
+      ],
+      "shots": [
+        8,
+        5
+      ],
+      "shotsOnTarget": [
+        4,
+        2
+      ],
+      "fouls": [
+        12,
+        9
+      ],
+      "corners": [
+        5,
+        5
+      ],
+      "offsides": [
+        0,
+        1
+      ],
+      "yellowCards": [
+        1,
+        2
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    },
+    "penalty1": 2,
+    "penalty2": 3
+  },
+  {
+    "id": 76,
+    "group": "R32",
+    "team1": "บราซิล",
+    "team2": "ญี่ปุ่น",
+    "score1": 2,
+    "score2": 1,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-29T05:00:00.000Z",
+    "venue": "Stadium ID 5",
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 29,
+        "team": "ญี่ปุ่น",
+        "player": "Kaishū Sano"
+      },
+      {
+        "type": "GOAL",
+        "minute": 56,
+        "team": "บราซิล",
+        "player": "Casemiro"
+      },
+      {
+        "type": "GOAL",
+        "minute": 90,
+        "team": "บราซิล",
+        "player": "Gabriel Martinelli"
+      }
+    ],
+    "stats": {
+      "possession": [
+        59,
+        41
+      ],
+      "shots": [
+        6,
+        8
+      ],
+      "shotsOnTarget": [
+        2,
+        3
+      ],
+      "fouls": [
+        15,
+        15
+      ],
+      "corners": [
+        3,
+        3
+      ],
+      "offsides": [
+        3,
+        1
+      ],
+      "yellowCards": [
+        0,
+        2
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 77,
+    "group": "R32",
+    "team1": "ฝรั่งเศส",
+    "team2": "สวีเดน",
+    "score1": 3,
+    "score2": 0,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-30T10:00:00.000Z",
+    "venue": "Stadium ID 11",
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 45,
+        "team": "ฝรั่งเศส",
+        "player": "Kylian Mbappé"
+      },
+      {
+        "type": "GOAL",
+        "minute": 53,
+        "team": "ฝรั่งเศส",
+        "player": "Bradley Barcola"
+      },
+      {
+        "type": "GOAL",
+        "minute": 74,
+        "team": "ฝรั่งเศส",
+        "player": "Kylian Mbappé"
+      }
+    ],
+    "stats": {
+      "possession": [
+        57,
+        43
+      ],
+      "shots": [
+        9,
+        9
+      ],
+      "shotsOnTarget": [
+        3,
+        4
+      ],
+      "fouls": [
+        11,
+        8
+      ],
+      "corners": [
+        7,
+        2
+      ],
+      "offsides": [
+        3,
+        2
+      ],
+      "yellowCards": [
+        2,
+        1
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 78,
+    "group": "R32",
+    "team1": "ไอวอรีโคสต์",
+    "team2": "นอร์เวย์",
+    "score1": 1,
+    "score2": 2,
+    "status": "FINISHED",
+    "minute": 90,
+    "date": "2026-06-30T05:00:00.000Z",
+    "venue": "Stadium ID 4",
+    "events": [
+      {
+        "type": "GOAL",
+        "minute": 39,
+        "team": "นอร์เวย์",
+        "player": "Antonio Nusa"
+      },
+      {
+        "type": "GOAL",
+        "minute": 74,
+        "team": "ไอวอรีโคสต์",
+        "player": "Amad Diallo"
+      },
+      {
+        "type": "GOAL",
+        "minute": 86,
+        "team": "นอร์เวย์",
+        "player": "Erling Haaland"
+      }
+    ],
+    "stats": {
+      "possession": [
+        46,
+        54
+      ],
+      "shots": [
+        9,
+        14
+      ],
+      "shotsOnTarget": [
+        4,
+        6
+      ],
+      "fouls": [
+        10,
+        11
+      ],
+      "corners": [
+        4,
+        5
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        1,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 79,
+    "group": "R32",
+    "team1": "เม็กซิโก",
+    "team2": "เอกวาดอร์",
+    "score1": 0,
+    "score2": 0,
+    "status": "LIVE",
+    "minute": 45,
+    "date": "2026-06-30T12:00:00.000Z",
+    "venue": "Stadium ID 1",
+    "events": [],
+    "stats": {
+      "possession": [
+        52,
+        48
+      ],
+      "shots": [
+        5,
+        10
+      ],
+      "shotsOnTarget": [
+        2,
+        5
+      ],
+      "fouls": [
+        12,
+        13
+      ],
+      "corners": [
+        3,
+        4
+      ],
+      "offsides": [
+        1,
+        3
+      ],
+      "yellowCards": [
+        2,
+        2
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 80,
+    "group": "R32",
+    "team1": "อังกฤษ",
+    "team2": "ดีอาร์ คองโก",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-01T05:00:00.000Z",
+    "venue": "Stadium ID 7",
     "events": [],
     "stats": {
       "possession": [
@@ -3420,16 +5238,1097 @@ let INITIAL_MATCHES = [
     }
   },
   {
-    "id": 72,
-    "group": "K",
-    "team1": "ดีอาร์ คองโก",
-    "team2": "อุซเบกิสถาน",
+    "id": 81,
+    "group": "R32",
+    "team1": "สหรัฐอเมริกา",
+    "team2": "บอสเนียและเฮอร์เซโกวีนา",
     "score1": 0,
     "score2": 0,
     "status": "SCHEDULED",
     "minute": 0,
-    "date": "2026-06-27T19:30:00-04:00",
-    "venue": "เมอร์เซเดส-เบนซ์ สเตเดียม (Atlanta)",
+    "date": "2026-07-01T10:00:00.000Z",
+    "venue": "Stadium ID 15",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 82,
+    "group": "R32",
+    "team1": "เบลเยียม",
+    "team2": "เซเนกัล",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-01T06:00:00.000Z",
+    "venue": "Stadium ID 14",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 83,
+    "group": "R32",
+    "team1": "โปรตุเกส",
+    "team2": "โครเอเชีย",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-02T12:00:00.000Z",
+    "venue": "Stadium ID 12",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 84,
+    "group": "R32",
+    "team1": "สเปน",
+    "team2": "ออสเตรีย",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-02T05:00:00.000Z",
+    "venue": "Stadium ID 16",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 85,
+    "group": "R32",
+    "team1": "สวิตเซอร์แลนด์",
+    "team2": "แอลจีเรีย",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-02T13:00:00.000Z",
+    "venue": "Stadium ID 13",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 86,
+    "group": "R32",
+    "team1": "อาร์เจนตินา",
+    "team2": "เคปเวิร์ด",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-03T11:00:00.000Z",
+    "venue": "Stadium ID 8",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 87,
+    "group": "R32",
+    "team1": "โคลอมเบีย",
+    "team2": "กานา",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-03T13:30:00.000Z",
+    "venue": "Stadium ID 6",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 88,
+    "group": "R32",
+    "team1": "ออสเตรเลีย",
+    "team2": "อียิปต์",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-03T06:00:00.000Z",
+    "venue": "Stadium ID 4",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 89,
+    "group": "R16",
+    "team1": "ปารากวัย",
+    "team2": "ฝรั่งเศส",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-04T10:00:00.000Z",
+    "venue": "Stadium ID 10",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 90,
+    "group": "R16",
+    "team1": "แคนาดา",
+    "team2": "โมร็อกโก",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-04T05:00:00.000Z",
+    "venue": "Stadium ID 5",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 91,
+    "group": "R16",
+    "team1": "บราซิล",
+    "team2": "นอร์เวย์",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-05T09:00:00.000Z",
+    "venue": "Stadium ID 11",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 92,
+    "group": "R16",
+    "team1": "ผู้ชนะคู่ที่ 79",
+    "team2": "ผู้ชนะคู่ที่ 80",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-05T11:00:00.000Z",
+    "venue": "Stadium ID 1",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 93,
+    "group": "R16",
+    "team1": "ผู้ชนะคู่ที่ 83",
+    "team2": "ผู้ชนะคู่ที่ 84",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-06T07:00:00.000Z",
+    "venue": "Stadium ID 4",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 94,
+    "group": "R16",
+    "team1": "ผู้ชนะคู่ที่ 81",
+    "team2": "ผู้ชนะคู่ที่ 82",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-06T10:00:00.000Z",
+    "venue": "Stadium ID 14",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 95,
+    "group": "R16",
+    "team1": "ผู้ชนะคู่ที่ 86",
+    "team2": "ผู้ชนะคู่ที่ 88",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-07T05:00:00.000Z",
+    "venue": "Stadium ID 7",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 96,
+    "group": "R16",
+    "team1": "ผู้ชนะคู่ที่ 85",
+    "team2": "ผู้ชนะคู่ที่ 87",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-07T06:00:00.000Z",
+    "venue": "Stadium ID 13",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 97,
+    "group": "QF",
+    "team1": "ผู้ชนะคู่ที่ 89",
+    "team2": "ผู้ชนะคู่ที่ 90",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-09T09:00:00.000Z",
+    "venue": "Stadium ID 9",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 98,
+    "group": "QF",
+    "team1": "ผู้ชนะคู่ที่ 93",
+    "team2": "ผู้ชนะคู่ที่ 94",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-10T05:00:00.000Z",
+    "venue": "Stadium ID 16",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 99,
+    "group": "QF",
+    "team1": "ผู้ชนะคู่ที่ 91",
+    "team2": "ผู้ชนะคู่ที่ 92",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-11T10:00:00.000Z",
+    "venue": "Stadium ID 8",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 100,
+    "group": "QF",
+    "team1": "ผู้ชนะคู่ที่ 95",
+    "team2": "ผู้ชนะคู่ที่ 96",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-11T13:00:00.000Z",
+    "venue": "Stadium ID 6",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 101,
+    "group": "SF",
+    "team1": "ผู้ชนะคู่ที่ 97",
+    "team2": "ผู้ชนะคู่ที่ 98",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-14T07:00:00.000Z",
+    "venue": "Stadium ID 4",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 102,
+    "group": "SF",
+    "team1": "ผู้ชนะคู่ที่ 99",
+    "team2": "ผู้ชนะคู่ที่ 100",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-15T08:00:00.000Z",
+    "venue": "Stadium ID 7",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 103,
+    "group": "3RD",
+    "team1": "ผู้แพ้คู่ที่ 101",
+    "team2": "ผู้แพ้คู่ที่ 102",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-18T10:00:00.000Z",
+    "venue": "Stadium ID 8",
+    "events": [],
+    "stats": {
+      "possession": [
+        50,
+        50
+      ],
+      "shots": [
+        0,
+        0
+      ],
+      "shotsOnTarget": [
+        0,
+        0
+      ],
+      "fouls": [
+        0,
+        0
+      ],
+      "corners": [
+        0,
+        0
+      ],
+      "offsides": [
+        0,
+        0
+      ],
+      "yellowCards": [
+        0,
+        0
+      ],
+      "redCards": [
+        0,
+        0
+      ]
+    }
+  },
+  {
+    "id": 104,
+    "group": "FINAL",
+    "team1": "ผู้ชนะคู่ที่ 101",
+    "team2": "ผู้ชนะคู่ที่ 102",
+    "score1": 0,
+    "score2": 0,
+    "status": "SCHEDULED",
+    "minute": 0,
+    "date": "2026-07-19T08:00:00.000Z",
+    "venue": "Stadium ID 11",
     "events": [],
     "stats": {
       "possession": [
@@ -3933,25 +6832,33 @@ async function fetchRealWorldMatches() {
     const data = await res.json();
     if (data && Array.isArray(data.games)) {
       data.games.forEach(game => {
-        const team1Thai = TEAM_EN_TO_TH[game.home_team_name_en];
-        const team2Thai = TEAM_EN_TO_TH[game.away_team_name_en];
-        if (!team1Thai || !team2Thai) return;
-
-        const match = matches.find(m => 
-          (m.team1 === team1Thai && m.team2 === team2Thai) ||
-          (m.team1 === team2Thai && m.team2 === team1Thai)
-        );
+        const match = matches.find(m => m.id === parseInt(game.id));
 
         if (match) {
+          const team1Thai = TEAM_EN_TO_TH[game.home_team_name_en] || (game.home_team_label ? game.home_team_label.replace('Winner Match ', 'ผู้ชนะคู่ที่ ').replace('Loser Match ', 'ผู้แพ้คู่ที่ ').replace('Winner Group ', 'อันดับ 1 กลุ่ม ').replace('Runner-up Group ', 'อันดับ 2 กลุ่ม ').replace('3rd Group ', 'อันดับ 3 กลุ่ม ') : '') || game.home_team_name_en || match.team1;
+          const team2Thai = TEAM_EN_TO_TH[game.away_team_name_en] || (game.away_team_label ? game.away_team_label.replace('Winner Match ', 'ผู้ชนะคู่ที่ ').replace('Loser Match ', 'ผู้แพ้คู่ที่ ').replace('Winner Group ', 'อันดับ 1 กลุ่ม ').replace('Runner-up Group ', 'อันดับ 2 กลุ่ม ').replace('3rd Group ', 'อันดับ 3 กลุ่ม ') : '') || game.away_team_name_en || match.team2;
+          
+          match.team1 = team1Thai;
+          match.team2 = team2Thai;
+
           const finished = game.finished === 'TRUE';
           const isLive = game.time_elapsed === 'live' || (!finished && game.time_elapsed !== 'notstarted' && game.time_elapsed !== 'null');
           
           const isHomeTeam1 = match.team1 === team1Thai;
-          const score1Val = parseInt(isHomeTeam1 ? game.home_score : game.away_score) || 0;
-          const score2Val = parseInt(isHomeTeam1 ? game.away_score : game.home_score) || 0;
+          const score1Val = parseInt(isHomeTeam1 ? game.home_score : game.away_score);
+          const score2Val = parseInt(isHomeTeam1 ? game.away_score : game.home_score);
           
-          match.score1 = score1Val;
-          match.score2 = score2Val;
+          if (!isNaN(score1Val) && !isNaN(score2Val)) {
+            match.score1 = score1Val;
+            match.score2 = score2Val;
+          }
+
+          const homePen = parseInt(game.home_penalty_score);
+          const awayPen = parseInt(game.away_penalty_score);
+          if (!isNaN(homePen) && !isNaN(awayPen)) {
+            match.penalty1 = isHomeTeam1 ? homePen : awayPen;
+            match.penalty2 = isHomeTeam1 ? awayPen : homePen;
+          }
           
           if (finished) {
             match.status = 'FINISHED';

@@ -16,12 +16,48 @@ interface TeamStanding {
   form: ('W' | 'D' | 'L')[];
 }
 
+interface MatchStats {
+  possession: [number, number];
+  shots: [number, number];
+  shotsOnTarget: [number, number];
+  fouls: [number, number];
+  corners: [number, number];
+  offsides: [number, number];
+  yellowCards: [number, number];
+  redCards: [number, number];
+}
+
+interface MatchEvent {
+  type: 'GOAL' | 'PENALTY' | 'OWN' | 'YELLOW' | 'RED';
+  minute: number;
+  team: string;
+  player: string;
+}
+
+interface Match {
+  id: number;
+  group: string;
+  team1: string;
+  team2: string;
+  score1: number;
+  score2: number;
+  penalty1?: number;
+  penalty2?: number;
+  status: 'FINISHED' | 'LIVE' | 'SCHEDULED';
+  minute: number;
+  date: string;
+  venue: string;
+  events: MatchEvent[];
+  stats: MatchStats;
+}
+
 interface KnockoutBracketProps {
   standings: Record<string, TeamStanding[]>;
   lang: LangType;
+  matches?: Match[];
 }
 
-export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lang }) => {
+export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lang, matches }) => {
   // บันทึกสถานะผู้ชนะที่ยูสเซอร์เลือกคลิกให้เข้ารอบในแต่ละแมตช์
   // Key: matchId (เช่น 'R32_1', 'R16_1', 'QF_1') -> Value: ชื่อประเทศที่ชนะ
   const [winners, setWinners] = useState<Record<string, string>>({});
@@ -100,9 +136,9 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
       const group = text.replace('อันดับ 2 กลุ่ม', '').trim();
       return `Runner-up Group ${group}`;
     }
-    if (text.startsWith('อันดับ 3 ดีเด่น #')) {
-      const num = text.replace('อันดับ 3 ดีเด่น #', '').trim();
-      return `Best 3rd #${num}`;
+    if (text.startsWith('อันดับ 3 กลุ่ม')) {
+      const group = text.replace('อันดับ 3 กลุ่ม', '').trim();
+      return `3rd Group ${group}`;
     }
     if (text.startsWith('ผู้ชนะคู่ที่')) {
       const num = text.replace('ผู้ชนะคู่ที่', '').trim();
@@ -117,7 +153,7 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
 
   // 2. ดึง 8 ทีมอันดับ 3 ที่ดีที่สุดจาก 12 กลุ่ม
   const getBestThirdPlaced = () => {
-    const thirds = Object.entries(standings)
+    const thirdsList = Object.entries(standings)
       .map(([group, teams]) => ({ group, teamData: teams[2] }))
       .filter(item => item.teamData && item.teamData.played > 0)
       .sort((a, b) => {
@@ -128,81 +164,171 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
 
     const best8 = [];
     for (let i = 0; i < 8; i++) {
-      best8.push(thirds[i]?.teamData.team || `อันดับ 3 ดีเด่น #${i + 1}`);
+      best8.push(thirdsList[i]?.teamData.team || `อันดับ 3 ดีเด่น #${i + 1}`);
     }
     return best8;
   };
 
   const thirds = getBestThirdPlaced();
 
+  // ดึงทีมจากรายการแมตช์จริง (สำหรับรอบน็อกเอาต์ 32 ทีม)
+  const getR32Teams = (idNum: number, fallbackT1: string, fallbackT2: string) => {
+    const match = matches?.find(m => m.id === idNum);
+    return {
+      t1: match && match.team1 ? match.team1 : fallbackT1,
+      t2: match && match.team2 ? match.team2 : fallbackT2,
+      score1: match?.score1,
+      score2: match?.score2,
+      penalty1: match?.penalty1,
+      penalty2: match?.penalty2,
+      status: match?.status || 'SCHEDULED'
+    };
+  };
+
   // กำหนดคู่แข่งรอบ 32 ทีมสุดท้ายตามผัง (ตรงตามสายแข่งขันจริง FIFA World Cup 2026)
   const r32Matches = [
-    { id: 'R32_1', t1: getGroupWinner('E'), t2: thirds[6] },
-    { id: 'R32_2', t1: getGroupWinner('I'), t2: thirds[5] },
-    { id: 'R32_3', t1: getGroupRunnerUp('A'), t2: getGroupRunnerUp('B') },
-    { id: 'R32_4', t1: getGroupWinner('F'), t2: getGroupRunnerUp('C') },
-    { id: 'R32_5', t1: getGroupRunnerUp('K'), t2: getGroupRunnerUp('L') },
-    { id: 'R32_6', t1: getGroupWinner('H'), t2: getGroupRunnerUp('J') },
-    { id: 'R32_7', t1: getGroupWinner('D'), t2: thirds[3] },
-    { id: 'R32_8', t1: getGroupWinner('G'), t2: thirds[4] },
-    { id: 'R32_9', t1: getGroupWinner('C'), t2: getGroupRunnerUp('F') },
-    { id: 'R32_10', t1: getGroupRunnerUp('E'), t2: getGroupRunnerUp('I') },
-    { id: 'R32_11', t1: getGroupWinner('A'), t2: thirds[0] },
-    { id: 'R32_12', t1: getGroupWinner('L'), t2: thirds[7] },
-    { id: 'R32_13', t1: getGroupWinner('J'), t2: getGroupRunnerUp('H') },
-    { id: 'R32_14', t1: getGroupRunnerUp('D'), t2: getGroupRunnerUp('G') },
-    { id: 'R32_15', t1: getGroupWinner('B'), t2: thirds[1] },
-    { id: 'R32_16', t1: getGroupWinner('K'), t2: thirds[2] }
+    { id: 'R32_1', apiId: 74, ...getR32Teams(74, getGroupWinner('E'), thirds[6]) },
+    { id: 'R32_2', apiId: 77, ...getR32Teams(77, getGroupWinner('I'), thirds[5]) },
+    { id: 'R32_3', apiId: 73, ...getR32Teams(73, getGroupRunnerUp('A'), getGroupRunnerUp('B')) },
+    { id: 'R32_4', apiId: 75, ...getR32Teams(75, getGroupWinner('F'), getGroupRunnerUp('C')) },
+    { id: 'R32_5', apiId: 83, ...getR32Teams(83, getGroupRunnerUp('K'), getGroupRunnerUp('L')) },
+    { id: 'R32_6', apiId: 84, ...getR32Teams(84, getGroupWinner('H'), getGroupRunnerUp('J')) },
+    { id: 'R32_7', apiId: 81, ...getR32Teams(81, getGroupWinner('D'), thirds[3]) },
+    { id: 'R32_8', apiId: 82, ...getR32Teams(82, getGroupWinner('G'), thirds[4]) },
+    { id: 'R32_9', apiId: 76, ...getR32Teams(76, getGroupWinner('C'), getGroupRunnerUp('F')) },
+    { id: 'R32_10', apiId: 78, ...getR32Teams(78, getGroupRunnerUp('E'), getGroupRunnerUp('I')) },
+    { id: 'R32_11', apiId: 79, ...getR32Teams(79, getGroupWinner('A'), thirds[0]) },
+    { id: 'R32_12', apiId: 80, ...getR32Teams(80, getGroupWinner('L'), thirds[7]) },
+    { id: 'R32_13', apiId: 86, ...getR32Teams(86, getGroupWinner('J'), getGroupRunnerUp('H')) },
+    { id: 'R32_14', apiId: 88, ...getR32Teams(88, getGroupRunnerUp('D'), getGroupRunnerUp('G')) },
+    { id: 'R32_15', apiId: 85, ...getR32Teams(85, getGroupWinner('B'), thirds[1]) },
+    { id: 'R32_16', apiId: 87, ...getR32Teams(87, getGroupWinner('K'), thirds[2]) }
   ];
 
-  // คำนวณผู้เล่นในรอบ 16 ทีมจากผลรอบ 32 ทีมที่ยูสเซอร์คลิกเลือกผู้ชนะ
+  // ดึงคู่น็อกเอาต์ในรอบลึก (ดึงค่าจริงจาก API หากยืนยันทีมแล้ว หรือดึงค่าคำทำนาย)
+  const getKnockoutTeams = (
+    idNum: number, 
+    prevMatch1Id: string, 
+    prevMatch2Id: string, 
+    fallbackLabel1: string, 
+    fallbackLabel2: string
+  ) => {
+    const match = matches?.find(m => m.id === idNum);
+    
+    // ตรวจสอบว่าคู่แข่งขันเป็นทีมประเทศจริง (ไม่ใช่ Label Placeholder เช่น Winner Match หรือ 3rd Group)
+    const hasActualTeam1 = match && match.team1 && !match.team1.includes('ผู้ชนะ') && !match.team1.includes('อันดับ') && !match.team1.includes('Winner') && !match.team1.includes('Runner-up') && !match.team1.includes('Best 3rd');
+    const hasActualTeam2 = match && match.team2 && !match.team2.includes('ผู้ชนะ') && !match.team2.includes('อันดับ') && !match.team2.includes('Winner') && !match.team2.includes('Runner-up') && !match.team2.includes('Best 3rd');
+    
+    const fallbackT1 = getWinnerOf(prevMatch1Id, fallbackLabel1);
+    const fallbackT2 = getWinnerOf(prevMatch2Id, fallbackLabel2);
+
+    return {
+      t1: hasActualTeam1 ? match!.team1 : fallbackT1,
+      t2: hasActualTeam2 ? match!.team2 : fallbackT2,
+      score1: match?.score1,
+      score2: match?.score2,
+      penalty1: match?.penalty1,
+      penalty2: match?.penalty2,
+      status: match?.status || 'SCHEDULED'
+    };
+  };
+
+  // คำนวณผู้ชนะในแต่ละแมตช์ที่แข่งเสร็จสิ้นแล้วจริง
+  const getWinnerOfMatch = (match: Match) => {
+    if (!match || match.status !== 'FINISHED') return undefined;
+    if (match.score1 > match.score2) return match.team1;
+    if (match.score2 > match.score1) return match.team2;
+    if (match.penalty1 !== undefined && match.penalty2 !== undefined) {
+      if (match.penalty1 > match.penalty2) return match.team1;
+      if (match.penalty2 > match.penalty1) return match.team2;
+    }
+    return undefined;
+  };
+
+  // ค้นหาผู้ชนะสะสมของน็อกเอาต์จากคู่แข่งขันจริงที่จบแล้ว
+  const getRealWinners = () => {
+    const real: Record<string, string> = {};
+    
+    // R32
+    r32Matches.forEach(m => {
+      const match = matches?.find(x => x.id === m.apiId);
+      if (match) {
+        const w = getWinnerOfMatch(match);
+        if (w) real[m.id] = w;
+      }
+    });
+
+    // ลูปจำลองหาผู้ชนะของรอบลึกเพื่อใช้อัปเดต UI อัตโนมัติหากแมตช์จบแล้วจริง
+    const allRounds = [
+      { id: 89, kId: 'R16_1' }, { id: 90, kId: 'R16_2' }, { id: 93, kId: 'R16_3' }, { id: 94, kId: 'R16_4' },
+      { id: 91, kId: 'R16_5' }, { id: 92, kId: 'R16_6' }, { id: 95, kId: 'R16_7' }, { id: 96, kId: 'R16_8' },
+      { id: 97, kId: 'QF_1' }, { id: 98, kId: 'QF_2' }, { id: 99, kId: 'QF_3' }, { id: 100, kId: 'QF_4' },
+      { id: 101, kId: 'SF_1' }, { id: 102, kId: 'SF_2' }, { id: 104, kId: 'FINAL' }
+    ];
+
+    allRounds.forEach(r => {
+      const match = matches?.find(x => x.id === r.id);
+      if (match) {
+        const w = getWinnerOfMatch(match);
+        if (w) real[r.kId] = w;
+      }
+    });
+
+    return real;
+  };
+
+  const realWinners = getRealWinners();
+  // รวมผู้ชนะจริงกับผลทำนาย (ถ้าแมตช์จริงมีผู้ชนะแล้ว จะเอาผลจริงก่อน)
+  const activeWinners = { ...realWinners, ...winners };
+
   const getWinnerOf = (matchId: string, fallbackText: string) => {
-    return winners[matchId] || fallbackText;
+    return activeWinners[matchId] || fallbackText;
   };
 
   const r16Matches = [
-    { id: 'R16_1', t1: getWinnerOf('R32_1', lang === 'th' ? 'ผู้ชนะคู่ที่ 1' : 'Winner Match 1'), t2: getWinnerOf('R32_2', lang === 'th' ? 'ผู้ชนะคู่ที่ 2' : 'Winner Match 2') },
-    { id: 'R16_2', t1: getWinnerOf('R32_3', lang === 'th' ? 'ผู้ชนะคู่ที่ 3' : 'Winner Match 3'), t2: getWinnerOf('R32_4', lang === 'th' ? 'ผู้ชนะคู่ที่ 4' : 'Winner Match 4') },
-    { id: 'R16_3', t1: getWinnerOf('R32_5', lang === 'th' ? 'ผู้ชนะคู่ที่ 5' : 'Winner Match 5'), t2: getWinnerOf('R32_6', lang === 'th' ? 'ผู้ชนะคู่ที่ 6' : 'Winner Match 6') },
-    { id: 'R16_4', t1: getWinnerOf('R32_7', lang === 'th' ? 'ผู้ชนะคู่ที่ 7' : 'Winner Match 7'), t2: getWinnerOf('R32_8', lang === 'th' ? 'ผู้ชนะคู่ที่ 8' : 'Winner Match 8') },
-    { id: 'R16_5', t1: getWinnerOf('R32_9', lang === 'th' ? 'ผู้ชนะคู่ที่ 9' : 'Winner Match 9'), t2: getWinnerOf('R32_10', lang === 'th' ? 'ผู้ชนะคู่ที่ 10' : 'Winner Match 10') },
-    { id: 'R16_6', t1: getWinnerOf('R32_11', lang === 'th' ? 'ผู้ชนะคู่ที่ 11' : 'Winner Match 11'), t2: getWinnerOf('R32_12', lang === 'th' ? 'ผู้ชนะคู่ที่ 12' : 'Winner Match 12') },
-    { id: 'R16_7', t1: getWinnerOf('R32_13', lang === 'th' ? 'ผู้ชนะคู่ที่ 13' : 'Winner Match 13'), t2: getWinnerOf('R32_14', lang === 'th' ? 'ผู้ชนะคู่ที่ 14' : 'Winner Match 14') },
-    { id: 'R16_8', t1: getWinnerOf('R32_15', lang === 'th' ? 'ผู้ชนะคู่ที่ 15' : 'Winner Match 15'), t2: getWinnerOf('R32_16', lang === 'th' ? 'ผู้ชนะคู่ที่ 16' : 'Winner Match 16') }
+    { id: 'R16_1', apiId: 89, ...getKnockoutTeams(89, 'R32_1', 'R32_2', lang === 'th' ? 'ผู้ชนะคู่ที่ 1' : 'Winner Match 1', lang === 'th' ? 'ผู้ชนะคู่ที่ 2' : 'Winner Match 2') },
+    { id: 'R16_2', apiId: 90, ...getKnockoutTeams(90, 'R32_3', 'R32_4', lang === 'th' ? 'ผู้ชนะคู่ที่ 3' : 'Winner Match 3', lang === 'th' ? 'ผู้ชนะคู่ที่ 4' : 'Winner Match 4') },
+    { id: 'R16_3', apiId: 93, ...getKnockoutTeams(93, 'R32_5', 'R32_6', lang === 'th' ? 'ผู้ชนะคู่ที่ 5' : 'Winner Match 5', lang === 'th' ? 'ผู้ชนะคู่ที่ 6' : 'Winner Match 6') },
+    { id: 'R16_4', apiId: 94, ...getKnockoutTeams(94, 'R32_7', 'R32_8', lang === 'th' ? 'ผู้ชนะคู่ที่ 7' : 'Winner Match 7', lang === 'th' ? 'ผู้ชนะคู่ที่ 8' : 'Winner Match 8') },
+    { id: 'R16_5', apiId: 91, ...getKnockoutTeams(91, 'R32_9', 'R32_10', lang === 'th' ? 'ผู้ชนะคู่ที่ 9' : 'Winner Match 9', lang === 'th' ? 'ผู้ชนะคู่ที่ 10' : 'Winner Match 10') },
+    { id: 'R16_6', apiId: 92, ...getKnockoutTeams(92, 'R32_11', 'R32_12', lang === 'th' ? 'ผู้ชนะคู่ที่ 11' : 'Winner Match 11', lang === 'th' ? 'ผู้ชนะคู่ที่ 12' : 'Winner Match 12') },
+    { id: 'R16_7', apiId: 95, ...getKnockoutTeams(95, 'R32_13', 'R32_14', lang === 'th' ? 'ผู้ชนะคู่ที่ 13' : 'Winner Match 13', lang === 'th' ? 'ผู้ชนะคู่ที่ 14' : 'Winner Match 14') },
+    { id: 'R16_8', apiId: 96, ...getKnockoutTeams(96, 'R32_15', 'R32_16', lang === 'th' ? 'ผู้ชนะคู่ที่ 15' : 'Winner Match 15', lang === 'th' ? 'ผู้ชนะคู่ที่ 16' : 'Winner Match 16') }
   ];
 
   // รอบ 8 ทีมสุดท้าย (Quarterfinals)
   const qfMatches = [
-    { id: 'QF_1', t1: getWinnerOf('R16_1', lang === 'th' ? 'ผู้ชนะคู่ที่ 17' : 'Winner Match 17'), t2: getWinnerOf('R16_2', lang === 'th' ? 'ผู้ชนะคู่ที่ 18' : 'Winner Match 18') },
-    { id: 'QF_2', t1: getWinnerOf('R16_3', lang === 'th' ? 'ผู้ชนะคู่ที่ 19' : 'Winner Match 19'), t2: getWinnerOf('R16_4', lang === 'th' ? 'ผู้ชนะคู่ที่ 20' : 'Winner Match 20') },
-    { id: 'QF_3', t1: getWinnerOf('R16_5', lang === 'th' ? 'ผู้ชนะคู่ที่ 21' : 'Winner Match 21'), t2: getWinnerOf('R16_6', lang === 'th' ? 'ผู้ชนะคู่ที่ 22' : 'Winner Match 22') },
-    { id: 'QF_4', t1: getWinnerOf('R16_7', lang === 'th' ? 'ผู้ชนะคู่ที่ 23' : 'Winner Match 23'), t2: getWinnerOf('R16_8', lang === 'th' ? 'ผู้ชนะคู่ที่ 24' : 'Winner Match 24') }
+    { id: 'QF_1', apiId: 97, ...getKnockoutTeams(97, 'R16_1', 'R16_2', lang === 'th' ? 'ผู้ชนะคู่ที่ 17' : 'Winner Match 17', lang === 'th' ? 'ผู้ชนะคู่ที่ 18' : 'Winner Match 18') },
+    { id: 'QF_2', apiId: 98, ...getKnockoutTeams(98, 'R16_3', 'R16_4', lang === 'th' ? 'ผู้ชนะคู่ที่ 19' : 'Winner Match 19', lang === 'th' ? 'ผู้ชนะคู่ที่ 20' : 'Winner Match 20') },
+    { id: 'QF_3', apiId: 99, ...getKnockoutTeams(99, 'R16_5', 'R16_6', lang === 'th' ? 'ผู้ชนะคู่ที่ 21' : 'Winner Match 21', lang === 'th' ? 'ผู้ชนะคู่ที่ 22' : 'Winner Match 22') },
+    { id: 'QF_4', apiId: 100, ...getKnockoutTeams(100, 'R16_7', 'R16_8', lang === 'th' ? 'ผู้ชนะคู่ที่ 23' : 'Winner Match 23', lang === 'th' ? 'ผู้ชนะคู่ที่ 24' : 'Winner Match 24') }
   ];
 
   // รอบรองชนะเลิศ (Semifinals)
   const sfMatches = [
-    { id: 'SF_1', t1: getWinnerOf('QF_1', lang === 'th' ? 'ผู้ชนะคู่ที่ 25' : 'Winner Match 25'), t2: getWinnerOf('QF_2', lang === 'th' ? 'ผู้ชนะคู่ที่ 26' : 'Winner Match 26') },
-    { id: 'SF_2', t1: getWinnerOf('QF_3', lang === 'th' ? 'ผู้ชนะคู่ที่ 27' : 'Winner Match 27'), t2: getWinnerOf('QF_4', lang === 'th' ? 'ผู้ชนะคู่ที่ 28' : 'Winner Match 28') }
+    { id: 'SF_1', apiId: 101, ...getKnockoutTeams(101, 'QF_1', 'QF_2', lang === 'th' ? 'ผู้ชนะคู่ที่ 25' : 'Winner Match 25', lang === 'th' ? 'ผู้ชนะคู่ที่ 26' : 'Winner Match 26') },
+    { id: 'SF_2', apiId: 102, ...getKnockoutTeams(102, 'QF_3', 'QF_4', lang === 'th' ? 'ผู้ชนะคู่ที่ 27' : 'Winner Match 27', lang === 'th' ? 'ผู้ชนะคู่ที่ 28' : 'Winner Match 28') }
   ];
 
   // รอบชิงชนะเลิศ (Final)
   const finalMatch = { 
     id: 'FINAL', 
-    t1: getWinnerOf('SF_1', lang === 'th' ? 'ผู้ชนะคู่ที่ 29' : 'Winner Match 29'), 
-    t2: getWinnerOf('SF_2', lang === 'th' ? 'ผู้ชนะคู่ที่ 30' : 'Winner Match 30') 
+    apiId: 104,
+    ...getKnockoutTeams(104, 'SF_1', 'SF_2', lang === 'th' ? 'ผู้ชนะคู่ที่ 29' : 'Winner Match 29', lang === 'th' ? 'ผู้ชนะคู่ที่ 30' : 'Winner Match 30') 
   };
 
-  const champion = winners['FINAL'];
+  const champion = activeWinners['FINAL'];
 
   // ฟังก์ชันสลับเลือกผู้ชนะ
   const handleSelectWinner = (matchId: string, teamName: string) => {
-    // ป้องกันการเลือกตัวหนังสือ Placeholder
+    // ป้องกันการเลือกตัวหนังสือ Placeholder หรือคู่ที่แข่งจบจริงแล้ว
     if (
       teamName.includes('ผู้ชนะ') || 
       teamName.includes('อันดับ') || 
       teamName.includes('Winner') || 
       teamName.includes('Runner-up') || 
-      teamName.includes('Best 3rd')
+      teamName.includes('Best 3rd') ||
+      realWinners[matchId] !== undefined
     ) return;
     
     setWinners(prev => {
@@ -405,12 +531,15 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
     link.click();
   };
 
-  const renderMatchCard = (match: { id: string; t1: string; t2: string }) => {
-    const isT1Winner = winners[match.id] === match.t1 && match.t1 !== '';
-    const isT2Winner = winners[match.id] === match.t2 && match.t2 !== '';
+  const renderMatchCard = (match: { id: string; t1: string; t2: string; score1?: number; score2?: number; penalty1?: number; penalty2?: number; status?: string }) => {
+    const isT1Winner = activeWinners[match.id] === match.t1 && match.t1 !== '';
+    const isT2Winner = activeWinners[match.id] === match.t2 && match.t2 !== '';
     
     const isT1Placeholder = match.t1.includes('อันดับ') || match.t1.includes('ผู้ชนะ');
     const isT2Placeholder = match.t2.includes('อันดับ') || match.t2.includes('ผู้ชนะ');
+
+    const hasFinished = match.status === 'FINISHED';
+    const isClickable = !hasFinished;
 
     return (
       <div key={match.id} className="bracket-match-card" style={{
@@ -424,7 +553,7 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
         fontSize: '0.8rem',
         width: '180px',
         position: 'relative',
-        boxShadow: winners[match.id] ? '0 0 10px rgba(6,182,212,0.05)' : 'none'
+        boxShadow: activeWinners[match.id] ? '0 0 10px rgba(6,182,212,0.05)' : 'none'
       }}>
         {/* หัวการ์ดแสดงรอบและวันที่แข่ง */}
         <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.65rem', color: 'var(--text-muted)', borderBottom: '1px solid rgba(255,255,255,0.04)', paddingBottom: '0.2rem', marginBottom: '0.1rem' }}>
@@ -434,14 +563,14 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
 
         {/* ทีม 1 */}
         <div 
-          onClick={() => handleSelectWinner(match.id, match.t1)}
+          onClick={() => isClickable && handleSelectWinner(match.id, match.t1)}
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
             padding: '0.35rem 0.5rem',
             borderRadius: '4px',
-            cursor: isT1Placeholder ? 'default' : 'pointer',
+            cursor: (isT1Placeholder || hasFinished) ? 'default' : 'pointer',
             background: isT1Winner ? 'rgba(16, 185, 129, 0.15)' : 'transparent',
             border: isT1Winner ? '1px solid var(--green)' : '1px solid transparent',
             fontWeight: isT1Winner ? '700' : 'normal',
@@ -453,19 +582,27 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
             {!isT1Placeholder && <span style={{ fontSize: '1.1rem' }}>{getTeamFlag(match.t1)}</span>}
             <span style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>{isT1Placeholder ? translatePlaceholder(match.t1) : `${translateTeam(match.t1, lang)}${getTeamOriginString(match.t1)}`}</span>
           </span>
-          {isT1Winner && <span style={{ color: 'var(--green)', fontSize: '0.75rem' }}>✓</span>}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+            {hasFinished && match.score1 !== undefined && (
+              <span style={{ fontWeight: '800', fontSize: '0.9rem', color: isT1Winner ? 'var(--green)' : 'var(--text-muted)' }}>
+                {match.score1}
+                {match.penalty1 !== undefined && match.penalty2 !== undefined && ` (${match.penalty1})`}
+              </span>
+            )}
+            {isT1Winner && <span style={{ color: 'var(--green)', fontSize: '0.75rem' }}>✓</span>}
+          </div>
         </div>
 
         {/* ทีม 2 */}
         <div 
-          onClick={() => handleSelectWinner(match.id, match.t2)}
+          onClick={() => isClickable && handleSelectWinner(match.id, match.t2)}
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
             padding: '0.35rem 0.5rem',
             borderRadius: '4px',
-            cursor: isT2Placeholder ? 'default' : 'pointer',
+            cursor: (isT2Placeholder || hasFinished) ? 'default' : 'pointer',
             background: isT2Winner ? 'rgba(16, 185, 129, 0.15)' : 'transparent',
             border: isT2Winner ? '1px solid var(--green)' : '1px solid transparent',
             fontWeight: isT2Winner ? '700' : 'normal',
@@ -477,7 +614,15 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
             {!isT2Placeholder && <span style={{ fontSize: '1.1rem' }}>{getTeamFlag(match.t2)}</span>}
             <span style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>{isT2Placeholder ? translatePlaceholder(match.t2) : `${translateTeam(match.t2, lang)}${getTeamOriginString(match.t2)}`}</span>
           </span>
-          {isT2Winner && <span style={{ color: 'var(--green)', fontSize: '0.75rem' }}>✓</span>}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+            {hasFinished && match.score2 !== undefined && (
+              <span style={{ fontWeight: '800', fontSize: '0.9rem', color: isT2Winner ? 'var(--green)' : 'var(--text-muted)' }}>
+                {match.score2}
+                {match.penalty1 !== undefined && match.penalty2 !== undefined && ` (${match.penalty2})`}
+              </span>
+            )}
+            {isT2Winner && <span style={{ color: 'var(--green)', fontSize: '0.75rem' }}>✓</span>}
+          </div>
         </div>
       </div>
     );
@@ -592,4 +737,3 @@ export const KnockoutBracket: React.FC<KnockoutBracketProps> = ({ standings, lan
     </div>
   );
 };
-

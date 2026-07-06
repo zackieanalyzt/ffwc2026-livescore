@@ -723,7 +723,7 @@ function App() {
         )}
         
         {activeTab === 'standings' && (
-          <StandingsTable standings={standings} lang={lang} />
+          <StandingsTable standings={standings} lang={lang} matches={matches} />
         )}
         
         {activeTab === 'matches' && (
@@ -731,7 +731,7 @@ function App() {
         )}
 
         {activeTab === 'knockout' && (
-          <KnockoutBracket standings={standings} lang={lang} />
+          <KnockoutBracket standings={standings} lang={lang} matches={matches} />
         )}
 
         {activeTab === 'leaderboard' && (
